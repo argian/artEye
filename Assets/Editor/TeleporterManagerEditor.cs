@@ -1,7 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEditor;
-using UnityEngine;
+﻿using UnityEditor;
 
 [CustomEditor(typeof(TeleporterManager))]
 public class TeleporterManagerEditor : Editor
@@ -10,7 +7,7 @@ public class TeleporterManagerEditor : Editor
     public string[] options;
     public int[] index;
 
-    void OnEnable()
+    private void OnEnable()
     {
         teleporters = FindObjectsOfType<Teleporter>();
 
@@ -45,7 +42,7 @@ public class TeleporterManagerEditor : Editor
         }
     }
     
-    int FindTeleporterIndex(Teleporter teleporter)
+    private int FindTeleporterIndex(Teleporter teleporter)
     {
         for (int i = 0; i < teleporters.Length; i++)
         {

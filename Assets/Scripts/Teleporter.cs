@@ -1,22 +1,20 @@
-﻿using System;
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
-using VRC.Udon;
 
 public class Teleporter : UdonSharpBehaviour
 {
     public string teleporterName;
-    [SerializeField] private Loadable[] toUnload;
-    [SerializeField] private Loadable[] toLoad;
     public Teleporter linkedTeleporter;
     public Transform exit;
+    
+    [SerializeField] private Loadable[] toUnload;
+    [SerializeField] private Loadable[] toLoad;
     private VRCPlayerApi vrcPlayerApi;
 
-    void Start()
+    private void Start()
     {
         vrcPlayerApi = Networking.LocalPlayer;
-        Debug.Log(vrcPlayerApi);
         if (!linkedTeleporter)
             Debug.LogError($"No teleporter linked to {name}");
     }
@@ -24,6 +22,7 @@ public class Teleporter : UdonSharpBehaviour
     public override void Interact()
     {
         base.Interact();
+        
         if (!vrcPlayerApi.isLocal)
             return;
         
@@ -34,20 +33,11 @@ public class Teleporter : UdonSharpBehaviour
         }
         
         foreach (Loadable loadable in toUnload)
-        {
             loadable.Unload();
-        }
-        
-        foreach (Loadable loadable in toLoad)
-        {
-            loadable.Load();
-        }
-        
-        vrcPlayerApi.TeleportTo(linkedTeleporter.exit.position, linkedTeleporter.exit.rotation);
 
-        /*
-        teleportedObject.transform.position = linkedTeleporter.exit.position;
-        teleportedObject.transform.rotation = linkedTeleporter.exit.rotation;
-        */
+        foreach (Loadable loadable in toLoad)
+            loadable.Load();
+
+        vrcPlayerApi.TeleportTo(linkedTeleporter.exit.position, linkedTeleporter.exit.rotation);
     }
 }

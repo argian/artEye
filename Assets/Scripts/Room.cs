@@ -3,7 +3,7 @@
 	public bool loadedOnStart = true;
 	public Loadable[] roomObjects;
 
-	void Start()
+	private void Start()
 	{
 		if (!loadedOnStart)
 			Unload();
