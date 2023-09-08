@@ -1,18 +1,24 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UdonSharp;
 using UnityEngine;
+using VRC.SDKBase;
 
-public class TeleporterManager : MonoBehaviour
+public class TeleporterManager : UdonSharpBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+	[SerializeField] private Loadable[] loadOnPlayerRespawn;
+	[SerializeField] private Loadable[] unloadOnPlayerRespawn;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+	public override void OnPlayerRespawn(VRCPlayerApi player)
+	{
+		base.OnPlayerRespawn(player);
+		foreach (Loadable loadable in unloadOnPlayerRespawn)
+		{
+			loadable.Unload();
+		}
+		foreach (Loadable loadable in loadOnPlayerRespawn)
+		{
+			loadable.Load();
+		}
+	}
 }
