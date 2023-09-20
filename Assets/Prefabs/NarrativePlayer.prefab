@@ -234,8 +234,8 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5041871191367354286}
-  m_LocalRotation: {x: 0.15304591, y: 0.6903456, z: -0.15304591, w: 0.6903456}
-  m_LocalPosition: {x: 0, y: 0.5, z: 0}
+  m_LocalRotation: {x: 0.27059805, y: 0.6532815, z: -0.27059805, w: 0.6532815}
+  m_LocalPosition: {x: 0, y: 0.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5041871191000881860}
@@ -314,6 +314,7 @@ MonoBehaviour:
   container: {fileID: 5041871192356762767}
   audioSource: {fileID: 5041871192192230230}
   textComponent: {fileID: 5041871191345756993}
+  playOnce: 0
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum
     leo euismod augue pharetra aliquam id quis dolor. Vivamus accumsan dictum nibh
     a cursus. Pellentesque consequat neque vel erat imperdiet malesuada. Nunc at

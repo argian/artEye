@@ -24,5 +24,7 @@ public class NarrativePlayerEditor : Editor
     {
         player.textComponent.text = player.text;
         player.audioSource.clip = player.clip;
+
+        PrefabUtility.RecordPrefabInstancePropertyModifications(player.textComponent);
     }
 }
