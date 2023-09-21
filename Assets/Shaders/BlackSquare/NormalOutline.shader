@@ -75,17 +75,9 @@
         float2 rounduv = float2(round(uv.x * _ScreenParams.x) / _ScreenParams.x, round(uv.y * _ScreenParams.y) / _ScreenParams.y);
         float2 move = float2((1 / _ScreenParams.x), (1 / _ScreenParams.y));
 
-        //depth check:
-        /*
-        if (col.a > 0.5f)
-        {
-            return col;
-        }
-        */
-        half depth = 1 - max(abs((col.x - 0.5) * 2), max(abs((col.y - 0.5) * 2), abs((col.z - 0.5) * 2)));
+        half depth = 1 - max(abs(col.x), max(abs(col.y), abs(col.z)));
 
-        //*
-        //half4 closestCol = tex2D(_GrabTex, rounduv);
+        //main loop
         for (int j = 1; j < _LineWidth; j++)
         {
             for (int i = 3; i >= 1; i--)
@@ -95,12 +87,14 @@
                 //reformat
                 nghCol = nghCol * 2 - 1;
 
-                half nghDepth = 1 - max(abs((nghCol.x - 0.5) * 2), max(abs((nghCol.y - 0.5) * 2), abs((nghCol.z - 0.5) * 2)));
+                half nghDepth = 1 - max(abs(nghCol.x), max(abs(nghCol.y), abs(nghCol.z)));
 
                 //check
                 //return dot(col, nghCol) / length(col) / length(nghCol);
-                half normalDiff = dot(col, nghCol) / (length(col) * length(nghCol));
+                //half normalDiff = abs(dot(col, nghCol)) / (length(col) * length(nghCol));
+                half normalDiff = abs(col.x * nghCol.x + col.y * nghCol.y + col.z * nghCol.z) / (length(col) * length(nghCol));
                 if (normalDiff < _NormalsThreshold)
+                //if (normalDiff < 50)
                 {
                     return half4(1, 1, 1, 1);
                 }

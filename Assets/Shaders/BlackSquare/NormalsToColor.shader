@@ -5,6 +5,9 @@ Shader "Unlit/NormalsToColor"
     Properties
     {
         _NormalMap("NormalMap", 2D) = "white" {}
+        _DepthNear("Depth Near", Range(0, 1000)) = 10
+        _DepthFar("Depth Far", Range(0, 1000)) = 200
+        _DepthPower("Depth Power", Range(1, 10)) = 2
     }
         SubShader
     {
@@ -42,14 +45,20 @@ Shader "Unlit/NormalsToColor"
                 float3 worldNormal : TEXCOORD5;
                 float4 pos : SV_POSITION;
                 //float eyePos : 
+                float eyeDepth : TEXCOORD6;
             };
 
             sampler2D _NormalMap;
             float4 _NormalMap_ST;
 
+            half _DepthNear;
+            half _DepthFar;
+            half _DepthPower;
+
             v2f vert(appdata v)
             {
                 v2f o;
+                //normals
                 o.pos = UnityObjectToClipPos(v.vertex);
                 o.worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
                 half3 wNormal = UnityObjectToWorldNormal(v.normal);
@@ -64,7 +73,10 @@ Shader "Unlit/NormalsToColor"
                 o.uv_normal = v.uv_normal;
                 o.worldNormal = wNormal;
 
-                //o.eyePos = mul(UNITY_MATRIX_MV, v.vertex);
+                //depth
+                //o.eyeDepth = -(UnityObjectToViewPos(v.vertex).z * _ProjectionParams.w);
+                o.eyeDepth = -UnityObjectToViewPos(v.vertex).z;
+                o.eyeDepth = length(UnityObjectToViewPos(v.vertex).xyz);
                 return o;
             }
 
@@ -81,12 +93,19 @@ Shader "Unlit/NormalsToColor"
             worldNormal.z = dot(i.tspace2, tnormal);
 
             //enchance normals:
-            worldNormal = round(worldNormal);
+            //worldNormal = round(worldNormal);
+
+            //apply depth:
+            float dist = (clamp(i.eyeDepth, _DepthNear, _DepthFar) - _DepthNear) / (_DepthFar - _DepthNear);
+            dist = 1 - pow(1 - dist * 0.99999, _DepthPower);
+            worldNormal *= (1 - dist);
+
             //convert normals to color space
+            worldNormal = -abs(worldNormal);
             col.rgb = worldNormal * 0.5 + 0.5;
+
             //convert gamma to linear result
             col.rgb = pow(col.rgb, 2.2);
-            //i.worldNormal
             return col;
         }
         ENDCG

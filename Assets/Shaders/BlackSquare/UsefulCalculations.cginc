@@ -5,6 +5,23 @@ half3 ToDirection(half3 data)
 	return data * max(abs(data.x), max(abs(data.y), abs(data.z)));
 }
 
+//v is regular vector, rot is in deegres
+float3 Rotate3D(float3 v, float3 rot) //using deegres
+{
+	float3 rad = 0.0174532924 * rot;
+	float3 Cos = cos(rad);
+	float3 Sin = sin(rad);
+
+	//x axis
+	v = float3(v.x, Cos.x * v.y + Sin.x * v.z, -Sin.x * v.y + Cos.x * v.z);
+	//y axis
+	v = float3(Cos.y * v.x - Sin.y * v.z, v.y, Sin.y * v.x + Cos.y * v.z);
+	//z axis
+	v = float3(Cos.z * v.x + Sin.z * v.y, -Sin.z * v.x + Cos.z * v.y, v.z);
+
+	return v;
+}
+
 float PseudoRandom(float Seed)
 {
 	float result = frac(sin(dot(Seed, float3(12.9898, 78.233, 45.5432))) * 43758.5453);

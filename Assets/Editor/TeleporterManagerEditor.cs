@@ -22,7 +22,6 @@ public class TeleporterManagerEditor : Editor
 
     public override void OnInspectorGUI()
     {
-        base.OnInspectorGUI();
         EditorGUILayout.BeginHorizontal();
         EditorGUILayout.LabelField("Teleporter", EditorStyles.boldLabel);
         EditorGUILayout.LabelField("Target", EditorStyles.boldLabel);
