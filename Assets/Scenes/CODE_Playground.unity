@@ -1679,6 +1679,14 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5041871191345756993, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_text
+      value: "The Black Square painted in 1915 by Kazimierz Malewicz is considered
+        to be both the first and the most important art piece of this new art movement
+        called Suprematism \u2013 a form of non-representational art that focused
+        strongly on the so-called world of feeling."
+      objectReference: {fileID: 0}
     - target: {fileID: 5041871191367354289, guid: bd716b9937445eb46898034191657175,
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -1746,6 +1754,19 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
         type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f344c6794973bb643a4d1e668da26c41, type: 3}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: text
+      value: "The Black Square painted in 1915 by Kazimierz Malewicz is considered
+        to be both the first and the most important art piece of this new art movement
+        called Suprematism \u2013 a form of non-representational art that focused
+        strongly on the so-called world of feeling."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
@@ -1754,6 +1775,6 @@ PrefabInstance:
         type: 3}
       propertyPath: m_audioClip
       value: 
-      objectReference: {fileID: 8300000, guid: 1199bb97b7ee955498965f8b3cd2008b, type: 3}
+      objectReference: {fileID: 8300000, guid: f344c6794973bb643a4d1e668da26c41, type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: bd716b9937445eb46898034191657175, type: 3}
