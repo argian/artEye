@@ -937,6 +937,7 @@ Transform:
   - {fileID: 8921609384393993417}
   - {fileID: 488070466587429994}
   - {fileID: 2374440518413077612}
+  - {fileID: 1626226859146366366}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -1215,7 +1216,7 @@ PrefabInstance:
     - target: {fileID: 4269892710278351461, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0.67
+      value: 0.17
       objectReference: {fileID: 0}
     - target: {fileID: 4269892710278351461, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
@@ -1444,6 +1445,128 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 9163906065887161040, guid: 9d4494b8b100519479f9699c5a7390a9,
     type: 3}
   m_PrefabInstance: {fileID: 5758087992582978929}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6010572210893416173
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 4346373019068806501}
+    m_Modifications:
+    - target: {fileID: 5041871191345756993, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_text
+      value: "The Black Square painted in 1915 by Kazimierz Malewicz is considered
+        to be both the first and the most important art piece of this new art movement
+        called Suprematism \u2013 a form of non-representational art that focused
+        strongly on the so-called world of feeling."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191345756993, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_fontSize
+      value: 18
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191367354289, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 45
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853873, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_Name
+      value: NarrativePlayer
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.64
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0.992
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.9238797
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0.38268322
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: -45.000004
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: clip
+      value: 
+      objectReference: {fileID: 8300000, guid: f344c6794973bb643a4d1e668da26c41, type: 3}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: text
+      value: "The Black Square painted in 1915 by Kazimierz Malewicz is considered
+        to be both the first and the most important art piece of this new art movement
+        called Suprematism \u2013 a form of non-representational art that focused
+        strongly on the so-called world of feeling."
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: playOnce
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+    - target: {fileID: 5041871192192230230, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 8300000, guid: f344c6794973bb643a4d1e668da26c41, type: 3}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd716b9937445eb46898034191657175, type: 3}
+--- !u!4 &1626226859146366366 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+    type: 3}
+  m_PrefabInstance: {fileID: 6010572210893416173}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6814226216289792534
 PrefabInstance:
