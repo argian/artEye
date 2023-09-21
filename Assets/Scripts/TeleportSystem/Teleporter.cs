@@ -1,4 +1,5 @@
-﻿using UdonSharp;
+﻿using System;
+using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 
@@ -10,11 +11,11 @@ public class Teleporter : UdonSharpBehaviour
 
     protected VRCPlayerApi vrcPlayerApi;
 
-    protected void Start()
+    protected virtual void Start()
     {
         vrcPlayerApi = Networking.LocalPlayer;
         if (!linkedTeleporter)
-            Debug.LogError($"No teleporter linked to {name}");
+            Debug.LogWarning($"No teleporter linked to {teleporterName}");
     }
 
     public override void Interact()

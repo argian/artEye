@@ -1,16 +1,23 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 
 public class RoomTeleporter : Teleporter
-{    
-    [SerializeField] private Loadable[] toUnload;
-    [SerializeField] private Loadable[] toLoad;
+{
+    public Room room;
+
+    private void OnValidate()
+    {
+        room = GetComponentInParent<Room>();
+        if (!room)
+            Debug.LogWarning($"{teleporterName} not inside of room");
+    }
 
     protected override void InvokeBeforeTeleport()
     {
-        foreach (Loadable loadable in toUnload)
-            loadable.Unload();
-
-        foreach (Loadable loadable in toLoad)
-            loadable.Load();
+        if (room)
+            room.Unload();
+        RoomTeleporter roomTeleporter = (RoomTeleporter)linkedTeleporter;
+        if (roomTeleporter)
+            roomTeleporter.room.Load();
     }
 }
