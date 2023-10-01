@@ -19,7 +19,7 @@
         }
 
         ZWrite Off
-        ZTest Always
+        ZTest Less
         Cull Off
 
         // Grab the screen behind where object is rendered
@@ -34,6 +34,7 @@
             #pragma vertex vert
             #pragma fragment frag
             #include "UnityCG.cginc"
+            #include "UsefulCalculations.cginc"
 
             struct v2f
             {
@@ -53,6 +54,7 @@
 sampler2D _GrabTex;
 vector CameraPos;
 vector CameraDir;
+float Fov;
 
             half4 frag(v2f i) : SV_Target
             {
@@ -60,7 +62,23 @@ vector CameraDir;
                 half4 col = tex2D(_GrabTex, uv);
                 
                 //funny test rainbow (actually these are normals but shhh)
-                col.xyz = CameraDir.xyz;
+                
+                //calculate camera frustum (lazy)
+                float2 uvFromCenter = (uv - 0.5) * 2;
+                //float3 rayDir = Rotate3D(CameraDir.xyz, float3(uvFromCenter.x * Fov, 0, uvFromCenter.y * Fov));
+                
+                //another way:
+                //float3 rayDir = Rotate3D(float3((uv - 0.5) * 2, 1), -CameraDir);
+                float3 rayDir = Rotate3DMatrix(CameraDir, float3(-(uv - 0.5) * 2, 1));
+
+                col.xyz = rayDir.xyz;
+
+                //draw testing sphere:
+                if (distance(float3(0, 0, 1), rayDir) < 0.5)
+                {
+                    col.xyz = float3(0.8, 0.8, 0.8);
+                }
+
                 return col;
             }
             ENDCG

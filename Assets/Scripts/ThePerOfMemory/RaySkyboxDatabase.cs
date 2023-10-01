@@ -1,21 +1,21 @@
-﻿
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
 public class RaySkyboxDatabase : ShaderPasser
 {
-
+	public Camera ReferenceCamera;
 	private VRCPlayerApi LocalPlayer;
 
 	protected override void BakePropertyNames()
 	{
-		PropertyNames = new string[2];
-		PropertyIDs = new int[2];
+		PropertyNames = new string[3];
+		PropertyIDs = new int[3];
 
 		PropertyNames[0] = "CameraPos";
 		PropertyNames[1] = "CameraDir";
+		PropertyNames[2] = "Fov";
 	}
 
 	protected override void FakeStart()
@@ -29,8 +29,10 @@ public class RaySkyboxDatabase : ShaderPasser
 		VRCPlayerApi.TrackingData playerHead = LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
 
 		MainMaterial.SetVector(PropertyIDs[0], playerHead.position);
-		MainMaterial.SetVector(PropertyIDs[1], playerHead.rotation.eulerAngles);
+		//MainMaterial.SetVector(PropertyIDs[1], playerHead.rotation.eulerAngles);
+		MainMaterial.SetVector(PropertyIDs[1], playerHead.rotation * Vector3.forward);
 
-		Debug.Log(playerHead.rotation.eulerAngles);
+		MainMaterial.SetFloat(PropertyIDs[2], ReferenceCamera.fieldOfView);
+		//Debug.Log(playerHead.rotation );
 	}
 }
