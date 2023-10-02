@@ -8,8 +8,6 @@ public class RoomTeleporter : Teleporter
     private void OnValidate()
     {
         room = GetComponentInParent<Room>();
-        if (!room)
-            Debug.LogWarning($"{teleporterName} not inside of room");
     }
 
     protected override void InvokeBeforeTeleport()
