@@ -33,6 +33,6 @@ public class RaySkyboxDatabase : ShaderPasser
 		MainMaterial.SetVector(PropertyIDs[1], playerHead.rotation * Vector3.forward);
 
 		MainMaterial.SetFloat(PropertyIDs[2], ReferenceCamera.fieldOfView);
-		//Debug.Log(playerHead.rotation );
+		//Debug.Log(ReferenceCamera.fieldOfView);
 	}
 }

@@ -68,8 +68,8 @@ float Fov;
                 //float3 rayDir = Rotate3D(CameraDir.xyz, float3(uvFromCenter.x * Fov, 0, uvFromCenter.y * Fov));
                 
                 //another way:
-                //float3 rayDir = Rotate3D(float3((uv - 0.5) * 2, 1), -CameraDir);
-                float3 rayDir = Rotate3DMatrix(CameraDir, float3(-(uv - 0.5) * 2, 1));
+                //*
+                float3 rayDir = Rotate3DMatrix(CameraDir, float3(-(uv - 0.5) * 2 * Fov, 1));
 
                 col.xyz = rayDir.xyz;
 
@@ -78,7 +78,14 @@ float Fov;
                 {
                     col.xyz = float3(0.8, 0.8, 0.8);
                 }
+                //*/
 
+                //yet another way (using only deegrees)
+                /*
+                float2 rayRot = float2(CameraDir.x + uvFromCenter.x * Fov, CameraDir.z + uvFromCenter.y * Fov);
+
+                col.xz = rayRot / 360;
+                */
                 return col;
             }
             ENDCG
