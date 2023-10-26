@@ -1,26 +1,21 @@
-﻿
-using System;
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
-using VRC.Udon;
 
 public class ThePersistenceOfMemory : UdonSharpBehaviour
 {
     public Marker[] markers;
     [SerializeField] private float totalWeightedValue;
     [SerializeField] private Vector3 playerRootBone;
-    [SerializeField] private GameObject targetObject;
+    [SerializeField] private Renderer targetRenderer;
+    [SerializeField] private string shaderPropertyName;
     
-    private Renderer targetRenderer;
     private VRCPlayerApi vrcPlayerApi;
 
     protected virtual void Start()
     {
         vrcPlayerApi = Networking.LocalPlayer;
-        if (targetObject)
-            targetRenderer = targetObject.GetComponent<Renderer>();
-        else
+        if (!targetRenderer)
             Debug.LogWarning("Target object not set!");
     }
 
@@ -32,19 +27,27 @@ public class ThePersistenceOfMemory : UdonSharpBehaviour
         playerRootBone = vrcPlayerApi.GetPosition(); // FIXME
         
         totalWeightedValue = 0.0f;
-        
+
+        float totalDistance = 0f;
+        float sumOfNormalizedDistances = 0f;
+        float[] normalizedDistances = new float[markers.Length];
+
         for (int i = 0; i < markers.Length; i++)
         {
             float distance = Vector3.Distance(markers[i].transform.position, playerRootBone);
-            float weight = 1f / distance;
-            float weightedValue = markers[i].weight * weight;
-            
-            totalWeightedValue += weightedValue;
+            totalDistance += distance;
+            normalizedDistances[i] = distance / totalDistance;
+            sumOfNormalizedDistances += normalizedDistances[i];
         }
-        
-        if (!targetObject)
+
+        for (int i = 0; i < markers.Length; i++)
+        {
+            totalWeightedValue += markers[i].weight * (sumOfNormalizedDistances - 2 * normalizedDistances[i]);
+        }
+
+        if (!targetRenderer)
             return;
         
-        targetRenderer.material.SetFloat("value", totalWeightedValue); // TODO set proper name
+        targetRenderer.material.SetFloat(shaderPropertyName, totalWeightedValue);
     }
 }
