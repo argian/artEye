@@ -42,15 +42,15 @@ Shader "Trash/ImageEffectTemplate"
             struct v2f
             {
                 float4 grabPos : TEXCOORD0;
-                float4 pos : SV_POSITION;
+                float4 clipPos : SV_POSITION;
             };
 
             v2f vert(appdata_base v)
             {
                 v2f o;
                 //this magic gets screen uv
-                o.pos = UnityObjectToClipPos(v.vertex);
-                o.grabPos = ComputeGrabScreenPos(o.pos);
+                o.clipPos = UnityObjectToClipPos(v.vertex);
+                o.grabPos = ComputeGrabScreenPos(o.clipPos);
                 return o;
             }
 

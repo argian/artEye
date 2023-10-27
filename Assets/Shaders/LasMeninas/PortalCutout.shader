@@ -11,15 +11,13 @@ Shader "Custom/PortalCutout"
         Tags { "RenderType" = "Opaque" "Queue" = "Geometry"}
         LOD 100
 
-        Cull off //this little line makes it so portals are not clipping
+        Cull Off //this little line makes it so portals are not clipping
 
         Pass
         {
             CGPROGRAM
             #pragma vertex vert
             #pragma fragment frag
-            // make fog work
-            #pragma multi_compile_fog
 
             #include "UnityCG.cginc"
 
@@ -43,7 +41,6 @@ Shader "Custom/PortalCutout"
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
-                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
                 o.screenPos = ComputeScreenPos(o.vertex);
                 return o;
             }
@@ -51,12 +48,13 @@ Shader "Custom/PortalCutout"
             fixed4 frag(v2f i) : SV_Target
             {
                 // sample the texture according to screen space
-                float2 grabUv = i.screenPos.xy / i.screenPos.w;
-                half4 col = tex2D(_MainTex, grabUv);
+                float2 screenUv = i.screenPos.xy / i.screenPos.w;
+                half4 col = tex2D(_MainTex, screenUv);
 
                 return col;
             }
             ENDCG
         }
     }
+        Fallback "Standard"
 }

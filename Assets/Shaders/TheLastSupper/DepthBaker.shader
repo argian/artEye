@@ -1,11 +1,11 @@
-﻿Shader "TheLastSupper/DepthWipeout"
+﻿Shader "Unlit/DepthBaker"
 {
     Properties
     {
     }
     SubShader
     {
-        Tags { "RenderType" = "Opaque" }
+        Tags { "RenderType"="Opaque" }
         LOD 100
         ColorMask 0
         Ztest Always
@@ -31,14 +31,14 @@
                 float4 vertex : SV_POSITION;
             };
 
-            v2f vert(appdata v)
+            v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
                 return o;
             }
 
-            fixed4 frag(v2f i) : SV_Target
+            fixed4 frag (v2f i) : SV_Target
             {
                 //nothing here since it only affects depth buffer
                 return half4(0, 0, 0, 1);

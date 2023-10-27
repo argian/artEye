@@ -1,29 +1,23 @@
-﻿Shader "Custom/DimensionLens2"
+﻿Shader "Unlit/aaaaaa"
 {
     Properties
     {
+        _MainTex ("Texture", 2D) = "white" {}
     }
-        SubShader
+    SubShader
+    {
+        Tags { "RenderType"="Opaque" }
+        LOD 100
+
+        Pass
         {
-            Tags { "RenderType" = "Opaque"  
-            "ForceNoShadowCasting" = "True" 
-            "Queue" = "Geometry-11"}
-            ColorMask 0
-            LOD 200
-            ZWrite off
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // make fog work
+            #pragma multi_compile_fog
 
-            Stencil
-            {
-                Ref 2
-                Comp Always
-                Pass Replace
-            }
-
-        Pass {
-        CGPROGRAM
-        #pragma vertex vert
-        #pragma fragment frag
-        #include "UnityCG.cginc"
+            #include "UnityCG.cginc"
 
             struct appdata
             {
@@ -41,7 +35,7 @@
             sampler2D _MainTex;
             float4 _MainTex_ST;
 
-            v2f vert(appdata v)
+            v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
@@ -50,16 +44,15 @@
                 return o;
             }
 
-            fixed4 frag(v2f i) : SV_Target
+            fixed4 frag (v2f i) : SV_Target
             {
                 // sample the texture
                 fixed4 col = tex2D(_MainTex, i.uv);
-            // apply fog
-            UNITY_APPLY_FOG(i.fogCoord, col);
-            return col;
-        }
-        ENDCG
+                // apply fog
+                UNITY_APPLY_FOG(i.fogCoord, col);
+                return col;
             }
+            ENDCG
         }
-            //FallBack "Diffuse"
+    }
 }

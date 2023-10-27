@@ -7,8 +7,8 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: RaySkybox
-  m_Shader: {fileID: 4800000, guid: 8ff1edf9c29ad2b41983bd1b5776382f, type: 3}
+  m_Name: RaySkybox2
+  m_Shader: {fileID: 4800000, guid: 2e2dc74d6b49f5c4d957bb618f7698ee, type: 3}
   m_ShaderKeywords: 
   m_LightmapFlags: 4
   m_EnableInstancingVariants: 0
@@ -73,7 +73,6 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - LightDir: {r: 0.5, g: -1, b: 1, a: 1}
-    - Spacing: {r: 0, g: 3.3598335, b: 0.1, a: 0}
+    - Spacing: {r: 0.1, g: 0.1, b: 0.1, a: 1}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}

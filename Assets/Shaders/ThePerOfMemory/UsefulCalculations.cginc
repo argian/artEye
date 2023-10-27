@@ -1,29 +1,95 @@
 
+/*
+float RoundScale(float val, float scale)
+{
+	float frac = val % scale / scale;
+	if (frac >= 0.5)
+	{
+		val 
+	}
+}
+*/
+
 //convert vector to direction
 half3 ToDirection(half3 data)
 {
 	return data * max(abs(data.x), max(abs(data.y), abs(data.z)));
 }
 
+//additionally returns direction in form of a vector
+float DirectedMax(float3 val, inout float3 dir)
+{
+	if (val.x >= val.y)
+	{
+		if (val.x >= val.z)
+		{
+			dir = float3(1, 0, 0);
+			return val.x;
+		}
+		else
+		{
+			dir = float3(0, 0, 1);
+			return val.z;
+		}
+	}
+	else if (val.y >= val.z)
+	{
+		dir = float3(0, 1, 0);
+		return val.y;
+	}
+	else
+	{
+		dir = float3(0, 0, 1);
+		return val.z;
+	}
+}
+
+float DirectedMin(float3 val, inout float3 dir)
+{
+	if (val.x <= val.y)
+	{
+		if (val.x <= val.z)
+		{
+			dir = float3(1, 0, 0);
+			return val.x;
+		}
+		else
+		{
+			dir = float3(0, 0, 1);
+			return val.z;
+		}
+	}
+	else if (val.y <= val.z)
+	{
+		dir = float3(0, 1, 0);
+		return val.y;
+	}
+	else
+	{
+		dir = float3(0, 0, 1);
+		return val.z;
+	}
+}
+
 //v is regular vector, rot is in deegres
-float3 Rotate3D(float3 v, float3 rot) //using deegres
+float3 Rotate3D(float3 pos, float3 rot) //using deegres
 {
 	float3 rad = 0.0174532924 * rot;
 	float3 Cos = cos(rad);
 	float3 Sin = sin(rad);
-
+	//this is matrix multiplication without generating matricies
 	//x axis
-	v = float3(v.x, Cos.x * v.y + Sin.x * v.z, -Sin.x * v.y + Cos.x * v.z);
+	pos = float3(pos.x, Cos.x * pos.y - Sin.x * pos.z, Sin.x * pos.y + Cos.x * pos.z);
 	//y axis
-	v = float3(Cos.y * v.x - Sin.y * v.z, v.y, Sin.y * v.x + Cos.y * v.z);
+	pos = float3(Cos.y * pos.x + Sin.y * pos.z, pos.y, -Sin.y * pos.x + Cos.y * pos.z);
 	//z axis
-	v = float3(Cos.z * v.x + Sin.z * v.y, -Sin.z * v.x + Cos.z * v.y, v.z);
+	pos = float3(Cos.z * pos.x - Sin.z * pos.y, Sin.z * pos.x + Cos.z * pos.y, pos.z);
 
-	return v;
+	return pos;
 }
 
 //input direction does not need to be actual dir, it can be any vector
-float3 Rotate3DMatrix(float3 dir, float3 pos)
+float3 Rotate3DMatrix(float3 pos, float3 dir)
 {
 	//rotation matrix creation:
 	float3 forward = normalize(dir);
