@@ -16,9 +16,8 @@ public class AnimationOnOffSwitch : UdonSharpBehaviour
         targetAnimator.SetBool(boolName, isOn);
     }
 
-    public override void Interact()
+    public void Interact()
     {
-        base.Interact();
         isOn = !isOn;
         targetAnimator.SetBool(boolName, isOn);
     }

@@ -9,9 +9,8 @@ public class AnimationSwitch : UdonSharpBehaviour
     [SerializeField] private Animator targetAnimator;
     [SerializeField] private string triggerName;
 
-    public override void Interact()
+    public void Interact()
     {
-        base.Interact();
         targetAnimator.SetTrigger(triggerName);
     }
 }
