@@ -19,29 +19,47 @@
                 Pass Replace
             }
 
-            CGPROGRAM
-            // Physically based Standard lighting model, and enable shadows on all light types
-            #pragma surface surf Standard
+        Pass {
+        CGPROGRAM
+        #pragma vertex vert
+        #pragma fragment frag
+        #include "UnityCG.cginc"
 
-            // Use shader model 3.0 target, to get nicer looking lighting
-            #pragma target 3.0
-
-            sampler2D _MainTex;
-
-            struct Input
+            struct appdata
             {
-                float2 uv_MainTex;
+                float4 vertex : POSITION;
+                float2 uv : TEXCOORD0;
             };
 
-            UNITY_INSTANCING_BUFFER_START(Props)
-
-            UNITY_INSTANCING_BUFFER_END(Props)
-
-            void surf(Input IN, inout SurfaceOutputStandard o)
+            struct v2f
             {
+                float2 uv : TEXCOORD0;
+                UNITY_FOG_COORDS(1)
+                float4 vertex : SV_POSITION;
+            };
 
+            sampler2D _MainTex;
+            float4 _MainTex_ST;
+
+            v2f vert(appdata v)
+            {
+                v2f o;
+                o.vertex = UnityObjectToClipPos(v.vertex);
+                o.uv = TRANSFORM_TEX(v.uv, _MainTex);
+                UNITY_TRANSFER_FOG(o,o.vertex);
+                return o;
             }
-            ENDCG
+
+            fixed4 frag(v2f i) : SV_Target
+            {
+                // sample the texture
+                fixed4 col = tex2D(_MainTex, i.uv);
+            // apply fog
+            UNITY_APPLY_FOG(i.fogCoord, col);
+            return col;
+        }
+        ENDCG
+            }
         }
             //FallBack "Diffuse"
 }
