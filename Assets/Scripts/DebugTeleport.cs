@@ -14,34 +14,34 @@ public class DebugTeleport : UdonSharpBehaviour
     {
         if (Input.GetKeyDown(KeyCode.Alpha1)) {
             if (teleporters[0])
-                teleporters[0].Interact();
+                teleporters[0].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha2)) {
             if (teleporters[1])
-                teleporters[1].Interact();
+                teleporters[1].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha3)) {
             if (teleporters[2])
-                teleporters[2].Interact();
+                teleporters[2].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha4)) {
             if (teleporters[3])
-                teleporters[3].Interact();
+                teleporters[3].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha5)) {
             if (teleporters[4])
-                teleporters[4].Interact();
+                teleporters[4].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha6)) {
             if (teleporters[5])
-                teleporters[5].Interact();
+                teleporters[5].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha7)) {
             if (teleporters[6])
-                teleporters[6].Interact();
+                teleporters[6].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha8)) {
             if (teleporters[7])
-                teleporters[7].Interact();
+                teleporters[7].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha9)) {
             if (teleporters[8])
-                teleporters[8].Interact();
+                teleporters[8].TeleportPlayer();
         } else if (Input.GetKeyDown(KeyCode.Alpha0)) {
             if (teleporters[9])
-                teleporters[9].Interact();
+                teleporters[9].TeleportPlayer();
         }
     }
 }

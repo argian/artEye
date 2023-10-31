@@ -837,6 +837,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 751083096}
+  - component: {fileID: 751083097}
   - component: {fileID: 751083095}
   m_Layer: 0
   m_Name: TeleporterManager
@@ -847,16 +848,30 @@ GameObject:
   m_IsActive: 1
 --- !u!114 &751083095
 MonoBehaviour:
-  m_ObjectHideFlags: 0
+  m_ObjectHideFlags: 2
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 751083094}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5ac5966ba07aa9343a69786cd822264f, type: 3}
+  m_Script: {fileID: 11500000, guid: 45115577ef41a5b4ca741ed302693907, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  interactTextPlacement: {fileID: 0}
+  interactText: Use
+  interactTextGO: {fileID: 0}
+  proximity: 2
+  SynchronizePosition: 0
+  AllowCollisionOwnershipTransfer: 0
+  Reliable: 0
+  _syncMethod: 2
+  serializedProgramAsset: {fileID: 11400000, guid: 63ead435855d9ed4a91c18705f11103c,
+    type: 2}
+  programSource: {fileID: 11400000, guid: ad57d8ae13045724f86739be68f0b65d, type: 2}
+  serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
+  publicVariablesUnityEngineObjects: []
+  publicVariablesSerializationDataFormat: 0
 --- !u!4 &751083096
 Transform:
   m_ObjectHideFlags: 0
@@ -871,6 +886,34 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &751083097
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 751083094}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5ac5966ba07aa9343a69786cd822264f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _udonSharpBackingUdonBehaviour: {fileID: 751083095}
+  fadeDuration: 2
+  targetRenderer: {fileID: 0}
+  shaderPropertyName: 
+  teleporterStatus: 0
+  fadeValue: 0
+  chosenTeleporter: {fileID: 0}
 --- !u!1 &751832068
 GameObject:
   m_ObjectHideFlags: 0
@@ -1203,6 +1246,11 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 1777077279721479084, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
+    - target: {fileID: 2067870942182386035, guid: af78aead1cd79bb45b8f523005a64ea0,
+        type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 512725211}
     - target: {fileID: 2067870942182386035, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
       propertyPath: teleporterName
@@ -1870,7 +1918,8 @@ MonoBehaviour:
   - {fileID: 1865394970}
   totalWeightedValue: 0
   playerRootBone: {x: 0, y: 0, z: 0}
-  targetObject: {fileID: 0}
+  targetRenderer: {fileID: 0}
+  shaderPropertyName: 
 --- !u!1 &1525170678 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4269892710278351460, guid: af78aead1cd79bb45b8f523005a64ea0,
@@ -3734,6 +3783,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2067870942182386035, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 1887432238}
+    - target: {fileID: 2067870942182386035, guid: af78aead1cd79bb45b8f523005a64ea0,
+        type: 3}
       propertyPath: teleporterName
       value: Main Hub
       objectReference: {fileID: 0}
@@ -3742,6 +3796,11 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 824529942}
+    - target: {fileID: 2067870942182386035, guid: af78aead1cd79bb45b8f523005a64ea0,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 751083097}
     - target: {fileID: 2067870942182386035, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
       propertyPath: toLoad.Array.size

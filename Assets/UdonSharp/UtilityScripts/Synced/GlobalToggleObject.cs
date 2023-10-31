@@ -29,7 +29,7 @@ namespace UdonSharp.Examples.Utilities
                 toggleObject.SetActive(isEnabled);
         }
 
-        public override void Interact()
+        public override void Teleport()
         {
             if (!Networking.IsOwner(gameObject))
                 Networking.SetOwner(Networking.LocalPlayer, gameObject);
