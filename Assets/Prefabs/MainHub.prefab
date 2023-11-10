@@ -5816,6 +5816,7 @@ GameObject:
   - component: {fileID: 8662892249170714108}
   - component: {fileID: 4568631691402816510}
   - component: {fileID: 2757616877050391481}
+  - component: {fileID: 6624549349348016884}
   m_Layer: 0
   m_Name: Lion_Shield001
   m_TagString: Untagged
@@ -5884,6 +5885,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6624549349348016884
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3293214012984803016}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.214424, y: 0.20308475, z: 2.3603487}
+  m_Center: {x: -2.6046263e-20, y: -0.0000012964008, z: -0.00000047683716}
 --- !u!1 &3306554551676565486
 GameObject:
   m_ObjectHideFlags: 0
@@ -7661,6 +7675,7 @@ GameObject:
   - component: {fileID: 6122050832935679043}
   - component: {fileID: 8756532093870896877}
   - component: {fileID: 7379186404197979407}
+  - component: {fileID: 1344076908147534385}
   m_Layer: 0
   m_Name: Lion_Shield002
   m_TagString: Untagged
@@ -7729,6 +7744,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &1344076908147534385
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4714381797711888446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.214424, y: 0.20308475, z: 2.3603487}
+  m_Center: {x: -2.6046263e-20, y: -0.0000012964008, z: -0.0000011920929}
 --- !u!1 &4775031889221138581
 GameObject:
   m_ObjectHideFlags: 0
@@ -7977,6 +8005,7 @@ GameObject:
   - component: {fileID: 7456356050176697402}
   - component: {fileID: 97905507928342767}
   - component: {fileID: 6005243490568866815}
+  - component: {fileID: 4540491287313565952}
   m_Layer: 0
   m_Name: Lion_Shield
   m_TagString: Untagged
@@ -8045,6 +8074,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4540491287313565952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4967075764836487009}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 2.214424, y: 0.20308475, z: 2.3603487}
+  m_Center: {x: 0, y: -0.000002250075, z: -0.0000011920929}
 --- !u!1 &5035395455553738743
 GameObject:
   m_ObjectHideFlags: 0
