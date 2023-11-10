@@ -2165,6 +2165,7 @@ GameObject:
   - component: {fileID: 6371136691507424716}
   - component: {fileID: 2419470301294384114}
   - component: {fileID: 4008711773775612014}
+  - component: {fileID: 4489038890365978176}
   m_Layer: 0
   m_Name: Vase_Hanging002
   m_TagString: Untagged
@@ -2233,6 +2234,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &4489038890365978176
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1281793553451838766}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3067096
+  m_Height: 1.0514948
+  m_Direction: 1
+  m_Center: {x: 0.00000011920929, y: -0.0000011026859, z: 0.00000035762787}
 --- !u!1 &1294103072688573300
 GameObject:
   m_ObjectHideFlags: 0
@@ -2718,6 +2733,7 @@ GameObject:
   - component: {fileID: 698762647942545568}
   - component: {fileID: 5860297631429572188}
   - component: {fileID: 7227414602721698005}
+  - component: {fileID: 6392362363759067913}
   m_Layer: 0
   m_Name: Vase_Octagonal001
   m_TagString: Untagged
@@ -2786,6 +2802,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6392362363759067913
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1672899850809356269}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3241794, y: 1.32418, z: 1.1886841}
+  m_Center: {x: -0.0000003874302, y: -0.0000019073486, z: -0.0000014305115}
 --- !u!1 &1712616824759648595
 GameObject:
   m_ObjectHideFlags: 0
@@ -3364,6 +3393,7 @@ GameObject:
   - component: {fileID: 5689362836620122255}
   - component: {fileID: 7807720946277327360}
   - component: {fileID: 7445201159606555032}
+  - component: {fileID: 6238628492841867482}
   m_Layer: 0
   m_Name: Vase_Hanging
   m_TagString: Untagged
@@ -3432,6 +3462,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &6238628492841867482
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2009867234003194702}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.30670986
+  m_Height: 1.0514954
+  m_Direction: 1
+  m_Center: {x: -1.0079664e-20, y: -0.0000013411043, z: 0.00000035762758}
 --- !u!1 &2025168377185508446
 GameObject:
   m_ObjectHideFlags: 0
@@ -4089,6 +4133,7 @@ GameObject:
   - component: {fileID: 7414017358436849183}
   - component: {fileID: 4590753861810811748}
   - component: {fileID: 9160567659585360968}
+  - component: {fileID: 577616433582955064}
   m_Layer: 0
   m_Name: Lion_Head001
   m_TagString: Untagged
@@ -4157,6 +4202,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &577616433582955064
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2353808247909922350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.82168674
+  m_Center: {x: 2.6046262e-20, y: 0.57, z: -0.0000013709068}
 --- !u!1 &2381684557223750979
 GameObject:
   m_ObjectHideFlags: 0
@@ -5019,6 +5077,7 @@ GameObject:
   - component: {fileID: 2389815647683647856}
   - component: {fileID: 2204593500330192396}
   - component: {fileID: 7811900164976621938}
+  - component: {fileID: 7122917356272777545}
   m_Layer: 0
   m_Name: Vase_Octagonal002
   m_TagString: Untagged
@@ -5087,6 +5146,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7122917356272777545
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2851294910844662643}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3241794, y: 1.32418, z: 1.1886841}
+  m_Center: {x: -0.00000014901161, y: -0.0000019073486, z: -0.0000014305115}
 --- !u!1 &2865275091810487172
 GameObject:
   m_ObjectHideFlags: 0
@@ -7324,6 +7396,7 @@ GameObject:
   - component: {fileID: 3178075964796590863}
   - component: {fileID: 8104390855299450713}
   - component: {fileID: 8006946474459506095}
+  - component: {fileID: 4427229766990534334}
   m_Layer: 0
   m_Name: Vase_Round001
   m_TagString: Untagged
@@ -7392,6 +7465,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4427229766990534334
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4504148391332026946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46166533, y: 0.46218273, z: 0.5008593}
+  m_Center: {x: 0.00000014901161, y: -0.00000035762787, z: -0.0000009536743}
 --- !u!1 &4588450157908071156
 GameObject:
   m_ObjectHideFlags: 0
@@ -7403,6 +7489,7 @@ GameObject:
   - component: {fileID: 2278944635479398447}
   - component: {fileID: 624625622884350292}
   - component: {fileID: 689199646076292078}
+  - component: {fileID: 3868803662797452812}
   m_Layer: 0
   m_Name: Vase_Round002
   m_TagString: Untagged
@@ -7471,6 +7558,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3868803662797452812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4588450157908071156}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46166533, y: 0.46218273, z: 0.5008593}
+  m_Center: {x: 0.00000014901161, y: 0.00000035762787, z: -0.00000166893}
 --- !u!1 &4605943716095770775
 GameObject:
   m_ObjectHideFlags: 0
@@ -8667,6 +8767,7 @@ GameObject:
   - component: {fileID: 3849460875292809593}
   - component: {fileID: 2819735566224796171}
   - component: {fileID: 4471033530765255191}
+  - component: {fileID: 4832667797386039115}
   m_Layer: 0
   m_Name: Arch_E001
   m_TagString: Untagged
@@ -8735,6 +8836,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &4832667797386039115
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5684126381165677727}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 4.9931927, y: 17.477667, z: 2.41}
+  m_Center: {x: 0, y: 0.000000011175871, z: 0.51}
 --- !u!1 &5689020473715967185
 GameObject:
   m_ObjectHideFlags: 0
@@ -9262,6 +9376,7 @@ GameObject:
   - component: {fileID: 6972669121200691444}
   - component: {fileID: 1761438714792473135}
   - component: {fileID: 7781916829254970839}
+  - component: {fileID: 6351030545515798976}
   m_Layer: 0
   m_Name: Vase_Octagonal003
   m_TagString: Untagged
@@ -9330,6 +9445,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6351030545515798976
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5883791806473950172}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3241794, y: 1.32418, z: 1.1886841}
+  m_Center: {x: 0.00000008940697, y: 0.0000019073486, z: -0.0000011920929}
 --- !u!1 &5927779411369160775
 GameObject:
   m_ObjectHideFlags: 0
@@ -9815,6 +9943,7 @@ GameObject:
   - component: {fileID: 1436731941412032051}
   - component: {fileID: 925679962241756641}
   - component: {fileID: 1559316718921187468}
+  - component: {fileID: 6243368569961584689}
   m_Layer: 0
   m_Name: Vase_Round005
   m_TagString: Untagged
@@ -9883,6 +10012,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6243368569961584689
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6207976333824384729}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46166533, y: 0.46218273, z: 0.5008593}
+  m_Center: {x: 0.000000029802322, y: 0.00000035762787, z: -0.00000166893}
 --- !u!1 &6302029347745477449
 GameObject:
   m_ObjectHideFlags: 0
@@ -10878,6 +11020,7 @@ GameObject:
   - component: {fileID: 7729142098621361777}
   - component: {fileID: 820654295352140287}
   - component: {fileID: 6660740694343459139}
+  - component: {fileID: 7532687124078773322}
   m_Layer: 0
   m_Name: Vase_Hanging001
   m_TagString: Untagged
@@ -10946,6 +11089,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &7532687124078773322
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6914400287681354026}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.30670986
+  m_Height: 1.0514954
+  m_Direction: 1
+  m_Center: {x: -0.00000011920929, y: -0.0000011026857, z: -0.0000025033953}
 --- !u!1 &6917540765188397095
 GameObject:
   m_ObjectHideFlags: 0
@@ -11291,8 +11448,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.41455936, y: 24.76475, z: 3.609951}
-  m_Center: {x: -5.6332765, y: -0.020654202, z: -0.0000007164868}
+  m_Size: {x: 0.4145596, y: 25.106865, z: 7.246313}
+  m_Center: {x: -5.6332765, y: 0.008045435, z: 1.818181}
 --- !u!65 &6330027929317422196
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11304,8 +11461,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.48114395, y: 24.853884, z: 3.609951}
-  m_Center: {x: 5.6702557, y: -0.056955814, z: -0.00000071865054}
+  m_Size: {x: 0.48114428, y: 25.108679, z: 7.246313}
+  m_Center: {x: 5.6702557, y: 0.009300817, z: 1.818181}
 --- !u!65 &6330027929317422197
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11317,8 +11474,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.22479, y: 0.4160861, z: 3.609951}
-  m_Center: {x: -0.0015778542, y: 12.355073, z: 0.000000021163736}
+  m_Size: {x: 10.85693, y: 0.4160863, z: 7.2463145}
+  m_Center: {x: 0.0019905784, y: 12.355073, z: 1.8181815}
 --- !u!65 &6330027929317422199
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11330,8 +11487,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 11.281343, y: 0.4086341, z: 3.609951}
-  m_Center: {x: -0.0074863434, y: -12.342329, z: -0.0000014509156}
+  m_Size: {x: 10.856298, y: 0.40863374, z: 7.246315}
+  m_Center: {x: 0.0033170525, y: -12.34233, z: 1.8181802}
 --- !u!1 &7093632519997700866
 GameObject:
   m_ObjectHideFlags: 0
@@ -11989,6 +12146,7 @@ GameObject:
   - component: {fileID: 4929092316380945414}
   - component: {fileID: 4479557629769312743}
   - component: {fileID: 1161189229323444580}
+  - component: {fileID: 2156889091944436395}
   m_Layer: 0
   m_Name: Vase_Octagonal
   m_TagString: Untagged
@@ -12057,6 +12215,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &2156889091944436395
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7417194587019824096}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3241794, y: 1.32418, z: 1.1886841}
+  m_Center: {x: -0.00000014901161, y: 0.0000019073486, z: -0.0000011920929}
 --- !u!1 &7422040277406471886
 GameObject:
   m_ObjectHideFlags: 0
@@ -12305,6 +12476,7 @@ GameObject:
   - component: {fileID: 181325077764808315}
   - component: {fileID: 5649772894115715162}
   - component: {fileID: 4446538538934230247}
+  - component: {fileID: 9107871598659819423}
   m_Layer: 0
   m_Name: Vase_Hanging003
   m_TagString: Untagged
@@ -12373,6 +12545,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!136 &9107871598659819423
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7508864952721603000}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  m_Radius: 0.3067096
+  m_Height: 1.0514948
+  m_Direction: 1
+  m_Center: {x: 0.00000011920929, y: -0.0000013411045, z: -0.000002026558}
 --- !u!1 &7556568284167252100
 GameObject:
   m_ObjectHideFlags: 0
@@ -13820,6 +14006,7 @@ GameObject:
   - component: {fileID: 3725614630282616045}
   - component: {fileID: 5226848720785261239}
   - component: {fileID: 8390774556874047795}
+  - component: {fileID: 8152731580877667228}
   m_Layer: 0
   m_Name: Vase_Round006
   m_TagString: Untagged
@@ -13888,6 +14075,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8152731580877667228
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8958999291909047162}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.46166533, y: 0.46218273, z: 0.5008593}
+  m_Center: {x: 0.00000014901161, y: -0.00000035762787, z: -0.0000009536743}
 --- !u!1 &9000841953794319869
 GameObject:
   m_ObjectHideFlags: 0
@@ -13899,6 +14099,7 @@ GameObject:
   - component: {fileID: 7561144544272831710}
   - component: {fileID: 5864649082542784992}
   - component: {fileID: 5072666352041501743}
+  - component: {fileID: 1600357134370405300}
   m_Layer: 0
   m_Name: Lion_Head
   m_TagString: Untagged
@@ -13967,6 +14168,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!135 &1600357134370405300
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9000841953794319869}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.82168674
+  m_Center: {x: -0.0000000018626451, y: 0.57, z: -0.0000013709068}
 --- !u!1 &9022360141229839858
 GameObject:
   m_ObjectHideFlags: 0
