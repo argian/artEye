@@ -3580,6 +3580,7 @@ GameObject:
   - component: {fileID: 5311202404485761192}
   - component: {fileID: 1808775382711838206}
   - component: {fileID: 8434250002910835606}
+  - component: {fileID: 6010672755909300974}
   m_Layer: 0
   m_Name: Details_Door_B
   m_TagString: Untagged
@@ -3648,6 +3649,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &6010672755909300974
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2044040586911255861}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.37817892, y: 1.6660768, z: 2.1842666}
+  m_Center: {x: 0.0364666, y: -0.007955034, z: -0.0000012720399}
 --- !u!1 &2075690107163256886
 GameObject:
   m_ObjectHideFlags: 0
@@ -4569,8 +4583,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2664208807522258333}
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 7.35, z: 0}
-  m_LocalScale: {x: 1.1, y: 1.1, z: 1.1}
+  m_LocalPosition: {x: 0, y: 9.6, z: -0}
+  m_LocalScale: {x: 1.5, y: 1.5, z: 1.5}
   m_Children:
   - {fileID: 4836585295164997245}
   - {fileID: 8975211676366635937}
@@ -9590,6 +9604,7 @@ GameObject:
   - component: {fileID: 8881075917155384893}
   - component: {fileID: 8734203148147986331}
   - component: {fileID: 1230022707640360532}
+  - component: {fileID: 8412548926505735744}
   m_Layer: 0
   m_Name: Details_Door_A001
   m_TagString: Untagged
@@ -9658,6 +9673,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &8412548926505735744
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5962354689449850062}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.3643535, y: 0.16805302, z: 2.6901257}
+  m_Center: {x: -0.000000009313226, y: 0.0000006109478, z: -0.0000012218952}
 --- !u!1 &5977762288180462579
 GameObject:
   m_ObjectHideFlags: 0
@@ -10746,6 +10774,7 @@ GameObject:
   - component: {fileID: 1362789600640054918}
   - component: {fileID: 5651488481097146071}
   - component: {fileID: 7089046130191802646}
+  - component: {fileID: 3664846693641175093}
   m_Layer: 0
   m_Name: Details_Door_A
   m_TagString: Untagged
@@ -10814,6 +10843,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &3664846693641175093
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6747447944327226693}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.364353, y: 0.16805302, z: 2.6901257}
+  m_Center: {x: 0, y: -0.000002250075, z: -0.00000047683716}
 --- !u!1 &6799885491723124771
 GameObject:
   m_ObjectHideFlags: 0
@@ -15150,7 +15192,7 @@ PrefabInstance:
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -5.85
+      value: -8.007
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
@@ -15253,17 +15295,17 @@ PrefabInstance:
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: 0.046
+      value: 0.063
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 5.113
+      value: 6.61
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 13.421
+      value: 18.17
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
