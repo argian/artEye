@@ -10,7 +10,7 @@ PrefabInstance:
     - target: {fileID: 5000160745269739226, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
       propertyPath: m_Name
-      value: BlackSquare
+      value: BlackSquare Painting
       objectReference: {fileID: 0}
     - target: {fileID: 5000160745269739227, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
@@ -61,7 +61,7 @@ PrefabInstance:
     - target: {fileID: 7104176430047452621, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
       propertyPath: teleporterName
-      value: ToBlackSquare
+      value: Black Square Painting
       objectReference: {fileID: 0}
     - target: {fileID: 7104176430047452621, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}

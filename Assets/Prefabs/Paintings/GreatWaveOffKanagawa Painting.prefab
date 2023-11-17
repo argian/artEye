@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 5000160745231266015, guid: 1796ecb9a72e94143b672398049ad576,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 14.5
+      objectReference: {fileID: 0}
     - target: {fileID: 5000160745269739226, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
       propertyPath: m_Name
@@ -76,7 +81,7 @@ PrefabInstance:
     - target: {fileID: 7104176430047452621, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
       propertyPath: teleporterName
-      value: ToGreatWaveOffKanagawa
+      value: Great Wave Off Kanagawa Painting
       objectReference: {fileID: 0}
     - target: {fileID: 7104176430047452621, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
