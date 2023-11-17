@@ -175,18 +175,6 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 5983576560447554029}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &183114268 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 4339689868588178011, guid: c63e9ce61d5b3dd4fa652b23e705152a,
-    type: 3}
-  m_PrefabInstance: {fileID: 6330027929468690234}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c5327c0b571974a92e2be4ed043930, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &191526043
 GameObject:
   m_ObjectHideFlags: 0
@@ -597,7 +585,7 @@ PrefabInstance:
         type: 3}
       propertyPath: linkedTeleporter
       value: 
-      objectReference: {fileID: 2007771878}
+      objectReference: {fileID: 0}
     - target: {fileID: 152415386253416908, guid: 6534decba6572ff40bfb4824faa0d49a,
         type: 3}
       propertyPath: toLoad.Array.data[0]
@@ -1229,7 +1217,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-990680
+  m_Name: pb_Mesh-2804
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1692,18 +1680,6 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5983576560447554029}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &2007771878 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 491427415427449424, guid: c63e9ce61d5b3dd4fa652b23e705152a,
-    type: 3}
-  m_PrefabInstance: {fileID: 6330027929468690234}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e8c5327c0b571974a92e2be4ed043930, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &2067168765 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4522581493091078207, guid: c46744c0e63a6dc4d8f1e8d94b1182c2,
@@ -1825,7 +1801,7 @@ PrefabInstance:
         type: 3}
       propertyPath: linkedTeleporter
       value: 
-      objectReference: {fileID: 183114268}
+      objectReference: {fileID: 0}
     - target: {fileID: 2310376711433326449, guid: 626691cd1e5e0ee4e9fbacb2fad0387f,
         type: 3}
       propertyPath: toLoad.Array.data[0]
@@ -3515,6 +3491,17 @@ PrefabInstance:
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
+    - target: {fileID: 7899165850354173836, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 1093653042}
+    - target: {fileID: 7899165850354173836, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 7899165850354173836, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
     - target: {fileID: 7985780850088009454, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
       propertyPath: m_StaticEditorFlags

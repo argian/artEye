@@ -10204,8 +10204,6 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1342761067327143822}
-  - {fileID: 2002577461090892109}
-  - {fileID: 2387716798628290886}
   - {fileID: 7625898701180210572}
   - {fileID: 7625898702822465423}
   m_Father: {fileID: 0}
@@ -14990,188 +14988,6 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!1001 &2353145462969327299
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6330027930561252617}
-    m_Modifications:
-    - target: {fileID: 111132673239629700, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_Name
-      value: TheLastSupper
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.139
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: -3.25
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772506486082559123, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: room
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772506486082559123, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: teleporterName
-      value: Sponza 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 2772506486082559123, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 2772506486082559123, guid: b96ddf59ac6cc984092369b193aa3d1a,
-        type: 3}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: b96ddf59ac6cc984092369b193aa3d1a, type: 3}
---- !u!4 &2387716798628290886 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 111132673239629701, guid: b96ddf59ac6cc984092369b193aa3d1a,
-    type: 3}
-  m_PrefabInstance: {fileID: 2353145462969327299}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3339669380306925179
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    m_TransformParent: {fileID: 6330027930561252617}
-    m_Modifications:
-    - target: {fileID: 1324427082997836832, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: room
-      value: 
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324427082997836832, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: teleporterName
-      value: Sponza 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 1324427082997836832, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: serializationData.Prefab
-      value: 
-      objectReference: {fileID: 1324427082997836832, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_RootOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 2.182
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0.7071068
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 90
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 3860277625930370871, guid: e93a62fa91913624cbb1e9b426a4d517,
-        type: 3}
-      propertyPath: m_Name
-      value: BlackSquareTeleporter
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: e93a62fa91913624cbb1e9b426a4d517, type: 3}
---- !u!4 &2002577461090892109 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 3860277625930370870, guid: e93a62fa91913624cbb1e9b426a4d517,
-    type: 3}
-  m_PrefabInstance: {fileID: 3339669380306925179}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6330027929790013839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -15187,7 +15003,7 @@ PrefabInstance:
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
@@ -15290,7 +15106,7 @@ PrefabInstance:
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
