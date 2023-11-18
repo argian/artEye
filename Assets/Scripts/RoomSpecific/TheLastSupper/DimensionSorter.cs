@@ -23,6 +23,9 @@ public class DimensionSorter : UdonSharpBehaviour
 
 	private void Update()
 	{
+		if (portals.Length == 0)
+			return;
+		
 		//get local player head data (yes, we have to get new one every frame)
 		VRCPlayerApi.TrackingData playerHead = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
 

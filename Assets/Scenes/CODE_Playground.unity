@@ -3913,15 +3913,11 @@ MonoBehaviour:
   DynamicPrefabs: []
   DynamicMaterials:
   - {fileID: 10303, guid: 0000000000000000f000000000000000, type: 0}
-  - {fileID: 2100000, guid: 2792d1d5309fadf4095977ebca9413d6, type: 2}
-  - {fileID: 2100000, guid: c37d430798a3b9945a59d3b95e62f4bb, type: 2}
-  - {fileID: -876546973899608171, guid: 7af1c8f11d5d5e64799eed66add8eff5, type: 3}
-  - {fileID: 2100000, guid: 3b8f78de9ea4cd343827961058e77e34, type: 2}
-  - {fileID: 2100000, guid: aba89fa4c1d504f4baea8145f3e3ba6c, type: 2}
+  - {fileID: 2100000, guid: 4e4e11f989834c14592847d416dad7e1, type: 2}
   - {fileID: 2100000, guid: 10b8a7507d904524da21b3304c2b4cdb, type: 2}
   - {fileID: 2100000, guid: 6bef9536f76c0064881d3a29bc5326ce, type: 2}
   - {fileID: 2100000, guid: dca45d3b54ebc4f4bacb2a725517dcd0, type: 2}
-  - {fileID: 2100000, guid: 2b11809bb8337354c97e894c09bd6e22, type: 2}
+  - {fileID: -876546973899608171, guid: 7af1c8f11d5d5e64799eed66add8eff5, type: 3}
   - {fileID: 2100000, guid: 1c987494452b85f4ab4cac3322415907, type: 2}
   - {fileID: 2100000, guid: d2f2155521017674a81550f2e687f1cc, type: 2}
   LightMapsNear: []

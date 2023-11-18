@@ -10,6 +10,7 @@ public class DimensionsRenderManager : UdonSharpBehaviour
     [SerializeField] private MeshRenderer wipeoutMesh;
     [SerializeField] private Shader wipeoutShader;
     [SerializeField] private Shader bakeShader;
+    [SerializeField] private Shader comparatorShader;
     [SerializeField] private Shader bakeFinal;
 
     void Start()
@@ -22,7 +23,7 @@ public class DimensionsRenderManager : UdonSharpBehaviour
 		DimensionSorter[] sorters = GetComponentsInChildren<DimensionSorter>();
 		
 		//calculate total render space needed for the queue
-		int currentQueue = 2000 - sorters.Length * 5 - 2; //1 for special, 1 to end in 1999
+		int currentQueue = 2000 - (sorters.Length + 1) * 5;
 
 		for (int i = 0; i < sorters.Length; i++)
 		{
@@ -31,8 +32,15 @@ public class DimensionsRenderManager : UdonSharpBehaviour
 
 			// bake all previous dimensions
 			for (int j = 0; j < i; j++)
+			{
 				for (int k = 0; k < sorters[j].portals.Length; k++)
-					AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), bakeShader, currentQueue);
+				{
+					if (j == 1)
+						AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), comparatorShader, ++currentQueue);
+					else
+						AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), bakeShader, currentQueue);
+				}
+			}
 
 			//first iteration requires 1 step less
 			if (i > 0)

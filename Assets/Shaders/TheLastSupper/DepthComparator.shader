@@ -2,12 +2,17 @@
 {
     Properties
     {
-        _Depth("Depth", float) = 98
+        _Comparison("Comparison", float) = 98
+        _Depth("Depth", float) = 100
+        _Depth2("Depth2", float) = -0.1
     }
     SubShader
     {
         Tags { "RenderType"="Opaque" }
         LOD 100
+        ColorMask 0
+        ZTest Always
+        ZWrite On
 
         Pass
         {
@@ -41,15 +46,20 @@
                 o.screenPos = ComputeScreenPos(o.vertex);
                 return o;
             }
+float _Comparison;
 float _Depth;
+float _Depth2;
             float frag(v2f i) : SV_Depth
             {
-
-                float depth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, screenPos);
+                float2 screenUv = i.screenPos.xy / i.screenPos.w;
+                float depth = SAMPLE_DEPTH_TEXTURE(_CameraDepthTexture, screenUv);
                 depth = Linear01Depth(depth) * _ProjectionParams.z;
                 // sample the texture
-                clip(_Depth - depth);
-                return _Depth;
+                if (depth < _Comparison)
+                {
+                    return _Depth;
+                }
+                return _Depth2;
             }
             ENDCG
         }

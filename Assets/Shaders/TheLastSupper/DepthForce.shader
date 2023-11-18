@@ -10,7 +10,7 @@
         Tags { "RenderType"="Opaque" }
         LOD 100
         ColorMask 0
-        Ztest Always
+        ZTest Always
         ZWrite on
 
         Pass
