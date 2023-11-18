@@ -15,7 +15,7 @@ namespace UdonSharp.Examples.Utilities
         [Tooltip("List of objects to toggle on and off")]
         public GameObject[] toggleObjects;
 
-        public override void Interact()
+        public void Interact()
         {
             foreach (GameObject toggleObject in toggleObjects)
             {
