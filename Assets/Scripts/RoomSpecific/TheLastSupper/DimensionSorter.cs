@@ -23,8 +23,6 @@ public class DimensionSorter : UdonSharpBehaviour
 
 	private void Update()
 	{
-		Debug.Log($"dupa {discardQueue}");
-		Debug.Log($"dupa {acceptQueue}");
 		//get local player head data (yes, we have to get new one every frame)
 		VRCPlayerApi.TrackingData playerHead = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
 
