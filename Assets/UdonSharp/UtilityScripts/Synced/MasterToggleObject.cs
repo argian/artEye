@@ -31,7 +31,7 @@ namespace UdonSharp.Examples.Utilities
             toggleObject.SetActive(isObjectEnabled);
         }
 
-        public override void Interact()
+        public void Interact()
         {
             if (!Networking.IsMaster)
                 return;
