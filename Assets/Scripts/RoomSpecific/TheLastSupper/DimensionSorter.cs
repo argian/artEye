@@ -6,39 +6,52 @@ using VRC.Udon;
 
 public class DimensionSorter : UdonSharpBehaviour
 {
-	public Transform DimensionSpace;
-	public Transform[] Portals;
-	private VRCPlayerApi LocalPlayer;
-	public int DiscardQueue;
-	public int AcceptQueue;
+	public DimensionalLens[] portals;
+	private VRCPlayerApi localPlayer;
+	[SerializeField] private int discardQueue;
+	[SerializeField] private int acceptQueue;
+
 	//public int PortalQueue;
-	public MeshRenderer[] DimensionMeshes;
+	public MeshRenderer[] dimensionMeshes;
+	[SerializeField] private MeshRenderer room;
 
 	private void Start()
 	{
-		LocalPlayer = Networking.LocalPlayer;
-		//PortalQueue = Portals[0].GetComponent<MeshRenderer>().material.renderQueue;
-		DimensionMeshes = DimensionSpace.GetComponentsInChildren<MeshRenderer>(includeInactive: false);
+		localPlayer = Networking.LocalPlayer;
+		dimensionMeshes = GetComponentsInChildren<MeshRenderer>(includeInactive: false);
 	}
 
 	private void Update()
 	{
+		Debug.Log($"dupa {discardQueue}");
+		Debug.Log($"dupa {acceptQueue}");
 		//get local player head data (yes, we have to get new one every frame)
-		VRCPlayerApi.TrackingData playerHead = LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
+		VRCPlayerApi.TrackingData playerHead = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
 
 		//portal dist:
-		float portalDist = Vector3.Distance(playerHead.position, Portals[0].transform.position);
-		for (int i = 0; i < DimensionMeshes.Length; ++i)
+		float portalDist = Vector3.Distance(playerHead.position, portals[0].transform.position);
+		for (int i = 0; i < dimensionMeshes.Length; ++i)
 		{
 			//check if object is between player and portal:
-			if (Vector3.Distance(playerHead.position, DimensionMeshes[i].transform.position) < portalDist)
+			if (Vector3.Distance(playerHead.position, dimensionMeshes[i].transform.position) < portalDist)
 			{
-				DimensionMeshes[i].material.renderQueue = DiscardQueue;
+				dimensionMeshes[i].material.renderQueue = discardQueue;
 			}
 			else
 			{
-				DimensionMeshes[i].material.renderQueue = AcceptQueue;
+				dimensionMeshes[i].material.renderQueue = acceptQueue;
 			}
 		}
+	}
+
+	public void SetDiscardQueue(int value)
+	{
+		discardQueue = value;
+	}
+	
+	public void SetAcceptQueue(int value)
+	{
+		acceptQueue = value;
+		room.material.renderQueue = acceptQueue;
 	}
 }
