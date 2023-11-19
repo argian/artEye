@@ -35,10 +35,11 @@ public class DimensionsRenderManager : UdonSharpBehaviour
 			{
 				for (int k = 0; k < sorters[j].portals.Length; k++)
 				{
-					if (j == 1)
-						AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), comparatorShader, ++currentQueue);
-					else
-						AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), bakeShader, currentQueue);
+				    // TODO comparatorShader needs tweaks
+					// if (j == 1)
+						// AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), comparatorShader, ++currentQueue);
+					// else
+					AddMaterialWithShader(sorters[j].portals[k].GetRenderer(), bakeShader, currentQueue);
 				}
 			}
 
