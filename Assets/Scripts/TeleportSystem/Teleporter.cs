@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections;
 using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
@@ -9,6 +10,7 @@ public class Teleporter : UdonSharpBehaviour
     public Teleporter linkedTeleporter;
     public Transform exit;
 
+    [SerializeField] protected TeleporterManager teleporterManager;
     protected VRCPlayerApi vrcPlayerApi;
 
     protected virtual void Start()
@@ -18,10 +20,16 @@ public class Teleporter : UdonSharpBehaviour
             Debug.LogWarning($"No teleporter linked to {teleporterName}");
     }
 
-    public override void Interact()
+    public void Interact()
     {
-        base.Interact();
+        if (teleporterManager)
+            teleporterManager.TeleportPlayerWithFade(this);
+        else
+            TeleportPlayer();
+    }
 
+    public virtual void TeleportPlayer()
+    {
         if (!vrcPlayerApi.isLocal)
             return;
 
@@ -41,4 +49,11 @@ public class Teleporter : UdonSharpBehaviour
     protected virtual void InvokeBeforeTeleport() { }
 
     protected virtual void InvokeAfterTeleport() { }
+}
+
+public enum TeleporterStatus
+{
+    None,
+    TeleportIn,
+    TeleportOut
 }
