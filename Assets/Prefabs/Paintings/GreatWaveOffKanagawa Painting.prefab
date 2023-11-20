@@ -78,6 +78,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 21300000, guid: d2a1c5b421606bc44ab808a31a377de6,
         type: 3}
+    - target: {fileID: 6711935225190456871, guid: 1796ecb9a72e94143b672398049ad576,
+        type: 3}
+      propertyPath: serializedProgramAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d478bcbe10d111409b4c20c0992c133,
+        type: 2}
     - target: {fileID: 7104176430047452621, guid: 1796ecb9a72e94143b672398049ad576,
         type: 3}
       propertyPath: teleporterName

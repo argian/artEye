@@ -20,7 +20,7 @@ public class Teleporter : UdonSharpBehaviour
             Debug.LogWarning($"No teleporter linked to {teleporterName}");
     }
 
-    public void Interact()
+    public override void Interact()
     {
         if (teleporterManager)
             teleporterManager.TeleportPlayerWithFade(this);

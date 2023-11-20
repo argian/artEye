@@ -507,6 +507,12 @@ PrefabInstance:
       propertyPath: serializationData.SerializedFormat
       value: 2
       objectReference: {fileID: 0}
+    - target: {fileID: 2522019081346149017, guid: af78aead1cd79bb45b8f523005a64ea0,
+        type: 3}
+      propertyPath: serializedProgramAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 6d478bcbe10d111409b4c20c0992c133,
+        type: 2}
     - target: {fileID: 4269892710278351460, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
       propertyPath: m_Name
