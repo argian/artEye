@@ -1,4 +1,5 @@
-﻿using UnityEditor;
+﻿using System.Linq;
+using UnityEditor;
 
 [CustomEditor(typeof(TeleporterManager))]
 public class TeleporterManagerEditor : Editor
@@ -11,8 +12,13 @@ public class TeleporterManagerEditor : Editor
     {
         teleporters = FindObjectsOfType<Teleporter>();
 
+        // Order teleporters by name (ascending)
+        teleporters = (from teleporter in teleporters 
+                       orderby teleporter.teleporterName 
+                       select teleporter).ToArray();
+
         options = new string[teleporters.Length + 1];
-        options[0] = "not set";
+        options[0] = "NONE";
         index = new int[teleporters.Length];
         for (int i = 0; i < teleporters.Length; i++)
         {
