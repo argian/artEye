@@ -1,29 +1,27 @@
-﻿Shader "Custom/DimensionLens1"
+﻿Shader "Unlit/DepthForce"
 {
     Properties
     {
+        _MainTex ("Texture", 2D) = "white" {}
+        _Depth ("Depth", float) = 100
     }
     SubShader
     {
-        Tags { "RenderType" = "Opaque"
-        "ForceNoShadowCasting" = "True"
-        "Queue" = "Geometry-10"}
+        Tags { "RenderType"="Opaque" }
+        LOD 100
         ColorMask 0
-        LOD 200
-        ZWrite off
+        ZTest Always
+        ZWrite on
 
-        Stencil
+        Pass
         {
-            Ref 1
-            Comp Always
-            Pass IncrSat
-        }
+            CGPROGRAM
+            #pragma vertex vert
+            #pragma fragment frag
+            // make fog work
+            #pragma multi_compile_fog
 
-        Pass {
-        CGPROGRAM
-        #pragma vertex vert
-        #pragma fragment frag
-        #include "UnityCG.cginc"
+            #include "UnityCG.cginc"
 
             struct appdata
             {
@@ -41,7 +39,7 @@
             sampler2D _MainTex;
             float4 _MainTex_ST;
 
-            v2f vert(appdata v)
+            v2f vert (appdata v)
             {
                 v2f o;
                 o.vertex = UnityObjectToClipPos(v.vertex);
@@ -50,16 +48,16 @@
                 return o;
             }
 
-            fixed4 frag(v2f i) : SV_Target
+
+float _Depth;
+            float frag (v2f i) : SV_Depth
             {
                 // sample the texture
-                fixed4 col = tex2D(_MainTex, i.uv);
-            // apply fog
-            UNITY_APPLY_FOG(i.fogCoord, col);
-            return col;
-        }
-        ENDCG
+                //fixed4 col = tex2D(_MainTex, i.uv);
+                //paste set value as depth
+                return _Depth;
             }
+            ENDCG
+        }
     }
-        //FallBack "Diffuse"
 }

@@ -1,23 +1,16 @@
-﻿Shader "Custom/DimensionLens2"
+﻿Shader "Custom/DimensionBaker"
 {
     Properties
     {
     }
-        SubShader
-        {
-            Tags { "RenderType" = "Opaque"  
-            "ForceNoShadowCasting" = "True" 
-            "Queue" = "Geometry-11"}
-            ColorMask 0
-            LOD 200
-            ZWrite off
-
-            Stencil
-            {
-                Ref 2
-                Comp Always
-                Pass Replace
-            }
+    SubShader
+    {
+        Tags { "RenderType" = "Opaque"
+        "ForceNoShadowCasting" = "True"
+        "Queue" = "Geometry-1"}
+        LOD 200
+        ColorMask 0
+        ZWrite on
 
         Pass {
         CGPROGRAM
@@ -60,6 +53,5 @@
         }
         ENDCG
             }
-        }
-            //FallBack "Diffuse"
+    }
 }
