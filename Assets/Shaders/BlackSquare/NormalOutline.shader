@@ -40,7 +40,7 @@
                 #pragma vertex vert
                 #pragma fragment frag
                 #include "UnityCG.cginc"
-                #include "UsefulCalculations.cginc"
+                #include "Assets/Shaders/General/UsefulCalculations.cginc"
 
                 struct v2f
                 {

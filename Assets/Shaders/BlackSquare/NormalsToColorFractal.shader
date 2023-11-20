@@ -20,8 +20,8 @@
             #pragma fragment frag
 
             #include "UnityCG.cginc"
-            #include "UsefulCalculations.cginc"
-            #include "FractalTextures.cginc"
+            #include "Assets/Shaders/General/UsefulCalculations.cginc"
+            #include "Assets/Shaders/General/FractalTextures.cginc"
 
             struct appdata
             {
