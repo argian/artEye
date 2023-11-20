@@ -49,7 +49,7 @@ public class Knob : UdonSharpBehaviour
 	}
 	
 	// TODO only for debbuging
-	public void Interact()
+	public override void Interact()
 	{
 		debugDisplay.text = GetValue();
 	}

@@ -73,3 +73,13 @@ crashlytics-build.properties
 
 # IDE
 .idea
+
+# SerializedUdonPrograms
+/[Aa]ssets/SerializedUdonPrograms.meta
+/[Aa]ssets/SerializedUdonPrograms.meta
+/[Aa]ssets/SerializedUdonPrograms
+/[Aa]ssets/SerializedUdonPrograms
+
+# Package "personal preferences"
+ProjectSettings/Packages/com.unity.polybrush/Settings.json
+ProjectSettings/Packages/com.unity.probuilder/Settings.json
