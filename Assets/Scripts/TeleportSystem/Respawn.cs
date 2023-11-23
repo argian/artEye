@@ -6,16 +6,35 @@ using VRC.Udon;
 
 public class Respawn : UdonSharpBehaviour
 {
-    public Room mainHub;
-    public Room[] otherRooms;
+    [SerializeField] private Renderer r;
     
-    public override void OnPlayerRespawn(VRCPlayerApi player)
+    [SerializeField] private Room[] loadOnRespawn;
+    [SerializeField] private Room[] unloadOnRespawn;
+
+    [SerializeField] private GameObject dummy;
+    
+    private void Update()
     {
-        base.OnPlayerRespawn(player);
-        mainHub.Load();
-        for (int i = 0; i < otherRooms.Length; i++)
+        /*
+        if (!dummy.activeSelf)
         {
-            otherRooms[i].Unload();
+            return;
         }
+
+        Debug.Log("on respawn");
+        r.material.color = Color.red;
+        
+        foreach (Room room in unloadOnRespawn)
+        {
+            room.Unload();
+        }
+        
+        foreach (Room room in loadOnRespawn)
+        {
+            room.Load();
+        }
+        
+        dummy.SetActive(false);
+        */
     }
 }
