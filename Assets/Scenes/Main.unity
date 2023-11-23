@@ -643,6 +643,16 @@ PrefabInstance:
       objectReference: {fileID: 6330027929468690236}
     - target: {fileID: 152415386253416908, guid: 6534decba6572ff40bfb4824faa0d49a,
         type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 152415386253416908, guid: 6534decba6572ff40bfb4824faa0d49a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 152415386253416908, guid: 6534decba6572ff40bfb4824faa0d49a,
+        type: 3}
       propertyPath: toLoad.Array.data[0]
       value: 
       objectReference: {fileID: 1093653042}
@@ -1129,6 +1139,91 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 7877593191210526724}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1329541949
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1329541952}
+  - component: {fileID: 1329541950}
+  - component: {fileID: 1329541951}
+  m_Layer: 0
+  m_Name: TeleporterFadeInOut
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1329541950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329541949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 114c7b1de032d29458544879fbf29590, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  serializationData:
+    SerializedFormat: 2
+    SerializedBytes: 
+    ReferencedUnityObjects: []
+    SerializedBytesString: 
+    Prefab: {fileID: 0}
+    PrefabModificationsReferencedUnityObjects: []
+    PrefabModifications: []
+    SerializationNodes: []
+  _udonSharpBackingUdonBehaviour: {fileID: 1329541951}
+  MainMaterial: {fileID: 0}
+  fadeDuration: 1
+  teleporterStatus: 0
+  fadeValue: 0
+  chosenTeleporter: {fileID: 0}
+--- !u!114 &1329541951
+MonoBehaviour:
+  m_ObjectHideFlags: 2
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329541949}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 45115577ef41a5b4ca741ed302693907, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  interactTextPlacement: {fileID: 0}
+  interactText: Use
+  interactTextGO: {fileID: 0}
+  proximity: 2
+  SynchronizePosition: 0
+  AllowCollisionOwnershipTransfer: 0
+  Reliable: 0
+  _syncMethod: 2
+  serializedProgramAsset: {fileID: 11400000, guid: 683517e30184ead47b8084de60443279,
+    type: 2}
+  programSource: {fileID: 11400000, guid: c3cd5528b88b94148b0a9d780be606c2, type: 2}
+  serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
+  publicVariablesUnityEngineObjects: []
+  publicVariablesSerializationDataFormat: 0
+--- !u!4 &1329541952
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1329541949}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 5
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1338082879 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4545552898524419501, guid: e4dde703feb317147b6b5783040d52f6,
@@ -1302,7 +1397,7 @@ Mesh:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: pb_Mesh-161726
+  m_Name: pb_Mesh-113302
   serializedVersion: 10
   m_SubMeshes:
   - serializedVersion: 2
@@ -1874,6 +1969,16 @@ PrefabInstance:
       objectReference: {fileID: 6330027929468690238}
     - target: {fileID: 3479592369328705621, guid: 22370c16a3f46b646970a374e2d792e7,
         type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 3479592369328705621, guid: 22370c16a3f46b646970a374e2d792e7,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 3479592369328705621, guid: 22370c16a3f46b646970a374e2d792e7,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 3479592369328705621, guid: 22370c16a3f46b646970a374e2d792e7,
@@ -1921,6 +2026,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 1010358620}
+    - target: {fileID: 2310376711433326449, guid: 626691cd1e5e0ee4e9fbacb2fad0387f,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 2310376711433326449, guid: 626691cd1e5e0ee4e9fbacb2fad0387f,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 2310376711433326449, guid: 626691cd1e5e0ee4e9fbacb2fad0387f,
         type: 3}
       propertyPath: toLoad.Array.data[0]
@@ -2018,6 +2133,21 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 6d478bcbe10d111409b4c20c0992c133,
         type: 2}
+    - target: {fileID: 2482013643319405269, guid: c46744c0e63a6dc4d8f1e8d94b1182c2,
+        type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 4522581495051021763}
+    - target: {fileID: 2482013643319405269, guid: c46744c0e63a6dc4d8f1e8d94b1182c2,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 2482013643319405269, guid: c46744c0e63a6dc4d8f1e8d94b1182c2,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 2482013643319405269, guid: c46744c0e63a6dc4d8f1e8d94b1182c2,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2131,9 +2261,30 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 2569164969378461890, guid: e4dde703feb317147b6b5783040d52f6,
         type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 4545552899853915027}
+    - target: {fileID: 2569164969378461890, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 2569164969378461890, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 2569164969378461890, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2569164969378461890, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
+    - target: {fileID: 2953427333395840968, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2953427333395840968, guid: e4dde703feb317147b6b5783040d52f6,
         type: 3}
     - target: {fileID: 4545552898524419501, guid: e4dde703feb317147b6b5783040d52f6,
         type: 3}
@@ -2213,6 +2364,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 11400000, guid: 759bb2b66c7d80148a3a6f0212368827,
         type: 2}
+    - target: {fileID: 8920271066156465646, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 8920271066156465646, guid: e4dde703feb317147b6b5783040d52f6,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e4dde703feb317147b6b5783040d52f6, type: 3}
 --- !u!114 &4545552899853915027 stripped
@@ -2234,6 +2391,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 191526044}
     m_Modifications:
+    - target: {fileID: 2887120679178940515, guid: 70fb9e09e99ac5943acb160092890ffd,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 2887120679178940515, guid: 70fb9e09e99ac5943acb160092890ffd,
+        type: 3}
     - target: {fileID: 4805644539264425081, guid: 70fb9e09e99ac5943acb160092890ffd,
         type: 3}
       propertyPath: m_Name
@@ -2316,6 +2479,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 6330027929468690237}
+    - target: {fileID: 6774427131713310886, guid: 70fb9e09e99ac5943acb160092890ffd,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 6774427131713310886, guid: 70fb9e09e99ac5943acb160092890ffd,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 6774427131713310886, guid: 70fb9e09e99ac5943acb160092890ffd,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2429,6 +2602,21 @@ PrefabInstance:
         type: 3}
     - target: {fileID: 5803404760964267397, guid: 0b9dfbaee1c2f8c4eaa1d6c822d7e83d,
         type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 5493081252953990834}
+    - target: {fileID: 5803404760964267397, guid: 0b9dfbaee1c2f8c4eaa1d6c822d7e83d,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 5803404760964267397, guid: 0b9dfbaee1c2f8c4eaa1d6c822d7e83d,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 5803404760964267397, guid: 0b9dfbaee1c2f8c4eaa1d6c822d7e83d,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 5803404760964267397, guid: 0b9dfbaee1c2f8c4eaa1d6c822d7e83d,
@@ -2460,6 +2648,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 191526044}
     m_Modifications:
+    - target: {fileID: 5664245899172059361, guid: 1f155fe2b6ed85d4ab44fa7a71b830ba,
+        type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 5920540300432615271}
+    - target: {fileID: 5664245899172059361, guid: 1f155fe2b6ed85d4ab44fa7a71b830ba,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 5664245899172059361, guid: 1f155fe2b6ed85d4ab44fa7a71b830ba,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 5664245899172059361, guid: 1f155fe2b6ed85d4ab44fa7a71b830ba,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2565,6 +2768,21 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 191526044}
     m_Modifications:
+    - target: {fileID: 5745294085347514589, guid: c0ebf89721ea46f4aa329b546250d510,
+        type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 5983576560447554030}
+    - target: {fileID: 5745294085347514589, guid: c0ebf89721ea46f4aa329b546250d510,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 5745294085347514589, guid: c0ebf89721ea46f4aa329b546250d510,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 5745294085347514589, guid: c0ebf89721ea46f4aa329b546250d510,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2680,6 +2898,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 6330027929468690239}
+    - target: {fileID: 5751647541084274423, guid: e75700689cc8a154289ee53c90eef075,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 5751647541084274423, guid: e75700689cc8a154289ee53c90eef075,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 5751647541084274423, guid: e75700689cc8a154289ee53c90eef075,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2829,10 +3057,30 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 397938987936505235, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 397938987936505235, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 397938987936505235, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 397938987936505235, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
+    - target: {fileID: 397938988437344144, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 397938988437344144, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 397938988437344144, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -2991,6 +3239,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 506229558}
+    - target: {fileID: 1534283772399931992, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 1534283772399931992, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 1534283772399931992, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -3192,6 +3450,16 @@ PrefabInstance:
       objectReference: {fileID: 1959183250}
     - target: {fileID: 2953553721070108240, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 2953553721070108240, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 2953553721070108240, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 2953553721070108240, guid: c63e9ce61d5b3dd4fa652b23e705152a,
@@ -3267,6 +3535,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 719655553}
+    - target: {fileID: 3589449450678965413, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 3589449450678965413, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 3589449450678965413, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -3404,6 +3682,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 278201327}
+    - target: {fileID: 4830467607981899448, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 4830467607981899448, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 4830467607981899448, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -3554,6 +3842,16 @@ PrefabInstance:
       objectReference: {fileID: 1699562419}
     - target: {fileID: 5818468253813109247, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 5818468253813109247, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 5818468253813109247, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 5818468253813109247, guid: c63e9ce61d5b3dd4fa652b23e705152a,
@@ -3608,6 +3906,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 1881588860}
+    - target: {fileID: 6251466132098153838, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 6251466132098153838, guid: c63e9ce61d5b3dd4fa652b23e705152a,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 6251466132098153838, guid: c63e9ce61d5b3dd4fa652b23e705152a,
         type: 3}
       propertyPath: serializationData.Prefab
@@ -4189,6 +4497,21 @@ PrefabInstance:
         type: 2}
     - target: {fileID: 8649789611552960003, guid: e0894fe3875292649849d75c40ba49d9,
         type: 3}
+      propertyPath: room
+      value: 
+      objectReference: {fileID: 7257749230296346218}
+    - target: {fileID: 8649789611552960003, guid: e0894fe3875292649849d75c40ba49d9,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 8649789611552960003, guid: e0894fe3875292649849d75c40ba49d9,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
+    - target: {fileID: 8649789611552960003, guid: e0894fe3875292649849d75c40ba49d9,
+        type: 3}
       propertyPath: serializationData.Prefab
       value: 
       objectReference: {fileID: 8649789611552960003, guid: e0894fe3875292649849d75c40ba49d9,
@@ -4302,6 +4625,16 @@ PrefabInstance:
       propertyPath: linkedTeleporter
       value: 
       objectReference: {fileID: 6330027929468690235}
+    - target: {fileID: 8205656304943669894, guid: ab42065d394545a4983821437dcf80d9,
+        type: 3}
+      propertyPath: teleporterManager
+      value: 
+      objectReference: {fileID: 218742058}
+    - target: {fileID: 8205656304943669894, guid: ab42065d394545a4983821437dcf80d9,
+        type: 3}
+      propertyPath: teleporterFadeInOut
+      value: 
+      objectReference: {fileID: 1329541950}
     - target: {fileID: 8205656304943669894, guid: ab42065d394545a4983821437dcf80d9,
         type: 3}
       propertyPath: serializationData.Prefab

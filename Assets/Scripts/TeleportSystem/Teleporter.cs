@@ -10,7 +10,7 @@ public class Teleporter : UdonSharpBehaviour
     public Teleporter linkedTeleporter;
     public Transform exit;
 
-    [SerializeField] protected TeleporterManager teleporterManager;
+    [SerializeField] protected TeleporterFadeInOut teleporterFadeInOut;
     protected VRCPlayerApi vrcPlayerApi;
 
     protected virtual void Start()
@@ -22,8 +22,8 @@ public class Teleporter : UdonSharpBehaviour
 
     public override void Interact()
     {
-        if (teleporterManager)
-            teleporterManager.TeleportPlayerWithFade(this);
+        if (teleporterFadeInOut)
+            teleporterFadeInOut.TeleportPlayerWithFade(this);
         else
             TeleportPlayer();
     }
