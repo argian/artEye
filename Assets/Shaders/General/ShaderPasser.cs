@@ -4,7 +4,7 @@ using UnityEngine;
 using VRC.SDKBase;
 using VRC.Udon;
 
-public class ShaderPasser : UdonSharpBehaviour
+public abstract class ShaderPasser : UdonSharpBehaviour
 {
     //I know I know, it's in shader folder, but this is the base class
     //for EVERY script that passes data to shaders,
@@ -20,17 +20,11 @@ public class ShaderPasser : UdonSharpBehaviour
         BakePropertyIDs();
         FakeStart();
     }
-    
-    protected virtual void FakeStart()
-	{
 
-	}
+    protected abstract void FakeStart();
 
     //trust me it is that 1% scenario when hardcoding values is better then setting in inspector, as they are shader based, not material based
-    protected virtual void BakePropertyNames()
-	{
-
-	}
+    protected abstract void BakePropertyNames();
 
     //we need to do that, it's just how shaders works
     void BakePropertyIDs()
@@ -44,12 +38,12 @@ public class ShaderPasser : UdonSharpBehaviour
 
 	void Update()
 	{
+		if (!MainMaterial)
+			return;
+		
         PassToRender();
 	}
 
     //this thing has to be custom-made every time because of different data formats
-    protected virtual void PassToRender()
-	{
-        
-	}
+    protected abstract void PassToRender();
 }
