@@ -31,11 +31,11 @@ public class RaySkyboxDatabase : ShaderPasser
 	protected override void PassToRender()
 	{
 		//camera pos and rot
-		VRCPlayerApi.TrackingData playerHead = LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head);
+		VRCPlayerApi.TrackingData playerHead = LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Origin);
 
 		MainMaterial.SetVector(PropertyIDs[0], playerHead.position);
-		MainMaterial.SetVector(PropertyIDs[1], LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position);
-		Debug.Log(LocalPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Origin).position);
+		MainMaterial.SetVector(PropertyIDs[1], playerHead.position);
+		
 		/*
 		MainMaterial.SetVector(PropertyIDs[1], playerHead.rotation * Vector3.forward);
 		MainMaterial.SetVector(PropertyIDs[2], playerHead.rotation.eulerAngles);
