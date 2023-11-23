@@ -6,16 +6,21 @@ using VRC.Udon;
 
 public class Respawn : UdonSharpBehaviour
 {
-    public Room mainHub;
-    public Room[] otherRooms;
-    
+    [SerializeField] private Room[] loadOnRespawn;
+    [SerializeField] private Room[] unloadOnRespawn;
+
     public override void OnPlayerRespawn(VRCPlayerApi player)
     {
         base.OnPlayerRespawn(player);
-        mainHub.Load();
-        for (int i = 0; i < otherRooms.Length; i++)
+        
+        foreach (Room room in unloadOnRespawn)
         {
-            otherRooms[i].Unload();
+            room.Unload();
+        }
+        
+        foreach (Room room in loadOnRespawn)
+        {
+            room.Load();
         }
     }
 }
