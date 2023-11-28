@@ -10,7 +10,7 @@
         // Draw after all opaque geometry
         Tags {
             "RenderType" = "Transparent"
-            "Queue" = "Geometry+1" //change it to correspond to scene!
+            "Queue" = "Overlay-2001" //change it to correspond to scene!
             "LightMode" = "Always"
             "IgnoreProjector" = "True"
             "DisableBatching" = "True"

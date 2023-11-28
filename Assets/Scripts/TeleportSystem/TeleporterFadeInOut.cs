@@ -10,6 +10,8 @@ public class TeleporterFadeInOut : ShaderPasser
     [SerializeField] private TeleporterStatus teleporterStatus;
     [SerializeField] private float fadeValue;
     [SerializeField] private Teleporter chosenTeleporter;
+    [SerializeField] private Transform faceCube;
+    VRCPlayerApi localPlayer;
 
     public void TeleportPlayerWithFade(Teleporter teleporter)
     {
@@ -27,7 +29,9 @@ public class TeleporterFadeInOut : ShaderPasser
         teleporterStatus = TeleporterStatus.TeleportIn;
     }
 
-    protected override void FakeStart() { }
+    protected override void FakeStart() {
+        localPlayer = Networking.LocalPlayer;
+    }
 
     protected override void BakePropertyNames()
     {
@@ -68,5 +72,6 @@ public class TeleporterFadeInOut : ShaderPasser
                 break;
         }
         MainMaterial.SetFloat(PropertyIDs[0], fadeValue);
+        faceCube.position = localPlayer.GetTrackingData(VRCPlayerApi.TrackingDataType.Head).position;
     }
 }
