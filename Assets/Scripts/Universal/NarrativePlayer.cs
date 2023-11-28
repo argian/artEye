@@ -3,21 +3,21 @@ using UnityEngine;
 using VRC.SDKBase;
 using TMPro;
 
-[RequireComponent(typeof(Collider))]
+[RequireComponent(typeof(Collider)), UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class NarrativePlayer : UdonSharpBehaviour
 {
     public GameObject container;
 
     public AudioSource audioSource;
 
+    public GameObject textCanvas;
+
     public TMP_Text textComponent;
 
-    [Space]
-    public bool playOnce;
 
-    bool skipClip;
+    bool isPlaying = false;
 
-    float playbackTime;
+    float playbackTime = 0;
 
 
 #if UNITY_EDITOR
@@ -31,6 +31,7 @@ public class NarrativePlayer : UdonSharpBehaviour
     void Start()
     {
         StopAndHide();
+        HideText();
     }
 
     public override void OnPlayerTriggerEnter(VRCPlayerApi player)
@@ -40,7 +41,7 @@ public class NarrativePlayer : UdonSharpBehaviour
         if (!player.isLocal)
             return;
 
-        ShowAndPlay();
+        ShowAndResume();
     }
 
     public override void OnPlayerTriggerExit(VRCPlayerApi player)
@@ -51,27 +52,60 @@ public class NarrativePlayer : UdonSharpBehaviour
             return;
 
         StopAndHide();
-
-        if (playOnce && playbackTime < Mathf.Epsilon)
-            skipClip = true;
     }
 
-    void ShowAndPlay()
+    void ShowAndResume()
     {
         container.SetActive(true);
 
-        if (skipClip)
-            return;
-
-        audioSource.time = playbackTime;
-        audioSource.Play();
+        if (isPlaying)
+            Play();
     }
 
     void StopAndHide()
     {
-        playbackTime = audioSource.time;
-        audioSource.Stop();
+        Stop();
+
+        if (isPlaying && playbackTime < Mathf.Epsilon)
+            isPlaying = false;
 
         container.SetActive(false);
+    }
+
+    public void Play()
+    {
+        audioSource.time = playbackTime;
+        audioSource.Play();
+
+        isPlaying = true;
+    }
+
+    public void Replay()
+    {
+        playbackTime = 0;
+        Play();
+    }
+
+    public void Pause()
+    {
+        Stop();
+        
+        isPlaying = false;
+    }
+
+    void Stop()
+    {
+        playbackTime = audioSource.time;
+        audioSource.Stop();
+    }
+
+    public void ShowText()
+    {
+        textCanvas.SetActive(true);
+    }
+
+    public void HideText()
+    {
+        textCanvas.SetActive(false);
     }
 }

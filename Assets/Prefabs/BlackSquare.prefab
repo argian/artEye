@@ -1040,7 +1040,8 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 6d478bcbe10d111409b4c20c0992c133,
+        type: 2}
     - target: {fileID: 4269892710278351460, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
       propertyPath: m_Name
@@ -1349,6 +1350,14 @@ PrefabInstance:
       propertyPath: m_audioClip
       value: 
       objectReference: {fileID: 8300000, guid: f344c6794973bb643a4d1e668da26c41, type: 3}
+    - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_text
+      value: "The Black Square painted in 1915 by Kazimierz Malewicz is considered
+        to be both the first and the most important art piece of this new art movement
+        called Suprematism \u2013 a form of non-representational art that focused
+        strongly on the so-called world of feeling."
+      objectReference: {fileID: 0}
     - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175,
         type: 3}
       propertyPath: m_AnchorMax.x
@@ -1372,6 +1381,16 @@ PrefabInstance:
     - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175,
         type: 3}
       propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_Size
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_Value
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7575754104050635033, guid: bd716b9937445eb46898034191657175,
