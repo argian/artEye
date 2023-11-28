@@ -73,7 +73,15 @@ Material:
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - LightDir: {r: 0.5, g: -1, b: 1, a: 1}
-    - Spacing: {r: 0, g: 3.3598335, b: 0.1, a: 0}
+    - CubeRoofDir: {r: 0, g: 0, b: 1, a: 1}
+    - CubeRoofPos: {r: -5, g: -0.5, b: -9.65, a: 1}
+    - CubeRoofScale: {r: 2.5, g: 0, b: 10, a: 1}
+    - CubeWallDir: {r: 0.01, g: 1, b: 0, a: 1}
+    - CubeWallPos: {r: -9.65, g: -2.5, b: -3, a: 1}
+    - CubeWallScale: {r: 10, g: 0, b: 2.5, a: 1}
+    - FacingDir: {r: 0, g: 0, b: 1, a: 1}
+    - LightDir: {r: -0.74, g: -1.74, b: 1.23, a: 1}
+    - MainGroundPos: {r: 0, g: -2.5, b: 0, a: 0}
+    - Spacing: {r: -0.29037893, g: 0.004999876, b: 399.44788, a: 0}
     - _Color: {r: 1, g: 1, b: 1, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
