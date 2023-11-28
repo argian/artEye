@@ -1,25 +1,19 @@
 
 #include "Assets/Shaders/General/UsefulCalculations.cginc"
-//renders an unrotated plane
-bool SimplePlane(float3 rayDir, inout float4 Hit, float3 pos, float3 facingDir, float3 scale)
+//renders an unrotated plane on the y axis
+bool SimplePlane(float3 rayDir, float3 pos, float3 scale, inout float4 Hit)
 {
-	//calculate intersection point along said axis
-	//if (dot(rayDir, facingDir) < 0) //ray point outwards, so cannot hit
-	//{
-		//return false;
-	//}
 
 	//now for testing only check y downwards:
-	if (rayDir.y > 0) //needed condition
+	if (rayDir.y >= 0) //needed condition
 	{
 		return false;
 	}
 
 	float magnitude = pos.y / rayDir.y;
-	float4 hit = float4(float3(pos.x, 0, pos.z) + rayDir * magnitude, 0);
+	float4 hit = float4(float3(0, 0, 0) + rayDir * magnitude, 0);
 	Hit = hit;
-	return true;
-	if (abs(hit.x) < scale.x && abs(hit.z) < scale.z) //check if within plane bounds
+	if (abs(hit.x - pos.x) < scale.x && abs(hit.z - pos.z) < scale.z) //check if within plane bounds
 	{
 		return true;
 	}
@@ -33,6 +27,7 @@ bool SimpleCheckboard(float3 pos, float3 spacing)
 {
 	//pos -= spacing / 2;
 	pos = abs(pos);
+	pos.xz = max(0, pos.xz + spacing.xz / 2);
 	if ((pos.x / spacing.x) % 2 < 1 && (pos.z / spacing.z) % 2 < 1)
 	{
 		return true;

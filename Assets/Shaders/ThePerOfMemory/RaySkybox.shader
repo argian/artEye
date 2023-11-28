@@ -4,6 +4,14 @@
     {
         //spacing("spacing", vector) = (1,1,1,1)
         LightDir("LightDir", vector) = (0, 0, 0, 1)
+        FacingDir("FacingDir", vector) = (0, 0, 1, 1)
+        MainGroundPos("MainGroundPos", vector) = (0, 0, 0, 0)
+        CubeWallPos("CubeWallPos", vector) = (0, 0, 0, 1)
+        CubeWallDir("CubeWallDir", vector) = (0, 0, 1, 1)
+        CubeWallScale("CubeWallScale", vector) = (0, 0, 0, 1)
+        CubeRoofPos("CubeRoofPos", vector) = (0, 0, 0, 1)
+        CubeRoofDir("CubeRoofDir", vector) = (0, 0, 1, 1)
+        CubeRoofScale("CubeRoofScale", vector) = (0, 0, 0, 1)
     }
         SubShader
     {
@@ -20,7 +28,7 @@
         }
 
         ZWrite Off
-        ZTest Always
+        ZTest LEqual
         Cull Off
 
         // Grab the screen behind where object is rendered
@@ -74,8 +82,96 @@
 
 sampler2D _GrabTex;
 uniform vector HeadPos;
-uniform vector Spacing;
+uniform vector Spacing1;
+uniform vector Spacing2;
+uniform vector Spacing3;
+
 vector LightDir;
+vector FacingDir;
+vector MainGroundPos;
+vector CubeWallPos;
+vector CubeWallDir;
+vector CubeWallScale;
+vector CubeRoofPos;
+vector CubeRoofDir;
+vector CubeRoofScale;
+
+//rayPos is not used, player is fixed as if he is in "center" of world
+//NOTE TO SELF: CHANGE RESULT NORMALS BASED ON FACING DIR
+bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 scale, float3 spacing, inout float4 Hit, inout float3 Normals)
+{
+    //space transformations to make several facing directions
+    //planePos = Rotate3DMatrix(planePos, facingDir);
+    rayDir = Rotate3DMatrix(rayDir, facingDir);
+
+    //actual object sequence
+    if (SimplePlane(rayDir, planePos, scale, Hit))
+    {
+        //if (SimpleCheckboard(Hit, spacing.xyz))
+        if (false)
+        {
+            //col.xyz = half4(0.8, 0.2, 0.6, 1);
+            Normals = Rotate3DMatrix(float3(1, 1, 0), facingDir);
+            Hit.w = 1;
+            return true;
+        }
+        else
+        {
+            //return false;
+            //render cube in nearest possible object
+            //            float3 nearestHit = float3((round(Hit.x / spacing.x / 2) * 2 + 0.5 * sign(rayDir.x)) * spacing.x, Hit.y - spacing.y / 2, (round(Hit.z / spacing.z / 2) * 2 + 0.5 * sign(rayDir.z)) * spacing.z);
+
+            //float3 nearestHole = float3(round((Hit.x + spacing.x / 2) / spacing.x) * spacing.x - spacing.x / 2, Hit.y - spacing.y / 2, );
+            //Hit.z -= planePos.z;
+            //Hit.x -= planePos.x;
+            Hit.xz += spacing.xz * sign(Hit.xz) / 2; //Falty, but will check for now
+            float3 nearestHit = float3((round(Hit.x / spacing.x / 2) * 2 + 0.5 * sign(rayDir.x)) * spacing.x, Hit.y - spacing.y / 2, (round(Hit.z / spacing.z / 2) * 2 + 0.5 * sign(rayDir.z)) * spacing.z);
+            nearestHit.xz -= spacing.xz * sign(Hit.xz) / 2; //+ planePos.xz
+            //nearestHit.xz -= planePos.xz;
+            /*
+            if (nearestHit.x < 0)
+            {
+                nearestHit.x += spacing.x;
+            }
+            */
+            //nearestHit.xz -= planePos.xz % spacing.xz;
+
+            if (SimpleCube(nearestHit, Hit, rayDir, spacing.xyz / 2, Normals))
+            {
+                Hit.w = 1;
+                return true;
+            }
+
+            //*
+            //okay, we actually have to also check 2 nearest object
+            if (abs(rayDir.x) > abs(rayDir.z))
+            {
+                nearestHit.x += spacing.x * 2 * sign(rayDir.x);
+            }
+            else if (abs(rayDir.z) > abs(rayDir.x))
+            {
+                nearestHit.z += spacing.z * 2 * sign(rayDir.z);
+            }
+            if (SimpleCube(nearestHit, Hit, rayDir, spacing.xyz / 2, Normals))
+            {
+                Hit.w = 1;
+                return true;
+            }
+            //*/
+        }
+    }
+
+    //cube for testing
+    /*
+    if (SimpleCube(float3(6, -3, 0), hit, rayDir, float3(2, 2, 2), normals))
+    {
+        Hit.w = 1;
+        return true;
+    }
+    */
+
+    return false;
+}
 
 half4 frag(v2f i) : SV_Target
 {
@@ -90,58 +186,50 @@ half4 frag(v2f i) : SV_Target
     float3 rayDir = normalize((i.ray.xyz / i.ray.w).xyz);
 
     col.xyz = rayDir;
-    float3 spacing = abs(float3(Spacing.x, 0.1, Spacing.z - 400));
+    float3 spacing = abs(float3(Spacing1.x, 0.1, Spacing1.z - 400));
 
     float4 hit = float4(0, 0, 0, 0); //w means if hits or not
     float3 normals = float3(0, 0, 0);
-    //*
-    if (SimplePlane(rayDir, hit, float3(0, -2, 0), float3(0, 1, 0), float3(10, 1, 10)))
+    //main ground
+    if (CubePatternPlane(rayDir, MainGroundPos.xyz, FacingDir.xyz, float3(1000, 1, 1000), Spacing1, hit, normals))
     {
-        if (SimpleCheckboard(hit, spacing.xyz))
-        {
-            //col.xyz = half4(0.8, 0.2, 0.6, 1);
-            normals = float3(0, 1, 0);
-            hit.w = 1;
-            col.xyz = half4(0.8, 0.2, 0.2, 1);
-        }
-        else
-        {
-            //render cube in nearest possible object
-            float3 nearestHit = float3((round(hit.x / spacing.x / 2) * 2 + 0.5 * sign(rayDir.x)) * spacing.x, hit.y - spacing.y / 2, (round(hit.z / spacing.z / 2) * 2 + 0.5 * sign(rayDir.z)) * spacing.z);
-            if (SimpleCube(nearestHit, hit, rayDir, spacing.xyz / 2, normals))
-            {
-                hit.w = 1;
-                col.xyz = half4(0.8, 0.2, 0.2, 1);
-            }
-
-            //okay, we actually have to also check 2 nearest object
-            if (abs(rayDir.x) > abs(rayDir.z))
-            {
-                nearestHit.x += spacing.x * 2 * sign(rayDir.x);
-            }
-            else if (abs(rayDir.z) > abs(rayDir.x))
-            {
-                nearestHit.z += spacing.z * 2 * sign(rayDir.z);
-            }
-            if (SimpleCube(nearestHit, hit, rayDir, spacing.xyz / 2, normals))
-            {
-                hit.w = 1;
-                col.xyz = half4(0.8, 0.2, 0.2, 1);
-            }
-        }
-    }
-
-    if (SimpleCube(float3(6, -3, 0), hit, rayDir, float3(2, 2, 2), normals))
-    {
-        hit.w = 1;
         col.xyz = half4(0.8, 0.2, 0.2, 1);
+        //normals = Rotate3DMatrix(rayDir, -FacingDir.xyz);
     }
+
     //shitty lighting
     if (hit.w != 0)
     {
         col *= dot(normals, normalize(-LightDir.xyz));
     }
-    //calculate screen col and uv and proceed to do nothing
+
+    //*
+    //partial Cube wall 
+    if (CubePatternPlane(rayDir, CubeWallPos.xyz, CubeWallDir.xyz, CubeWallScale.xyz, Spacing2.xyz, hit, normals))
+    {
+        col.xyz = half4(0.8, 0.2, 0.2, 1);
+        //normals = Rotate3DMatrix(rayDir, -CubeWallDir.xyz);
+    }
+
+    //shitty lighting
+    if (hit.w != 0)
+    {
+        col *= dot(normals, normalize(-LightDir.xyz));
+    }
+
+    //partial Cube roof 
+    if (CubePatternPlane(rayDir, CubeRoofPos.xyz, CubeRoofDir.xyz, CubeRoofScale.xyz, Spacing3.xyz, hit, normals))
+    {
+        col.xyz = half4(0.8, 0.2, 0.2, 1);
+        //normals = Rotate3DMatrix(rayDir, -CubeRoofDir.xyz);
+    }
+
+    //shitty lighting
+    if (hit.w != 0)
+    {
+        col *= dot(normals, normalize(-LightDir.xyz));
+    }
+
     return col;
 }
             ENDCG
