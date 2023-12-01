@@ -1550,6 +1550,9 @@ MonoBehaviour:
   audioSource: {fileID: 5041871192192230230}
   textCanvas: {fileID: 5859562526719389794}
   textComponent: {fileID: 5042882148406605526}
+  playButton: {fileID: 2362818746312838603}
+  pauseButton: {fileID: 3906590700266452933}
+  autoResume: 0
   text: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum dictum
     leo euismod augue pharetra aliquam id quis dolor. Vivamus accumsan dictum nibh
     a cursus. Pellentesque consequat neque vel erat imperdiet malesuada. Nunc at
