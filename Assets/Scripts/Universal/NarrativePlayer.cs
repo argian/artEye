@@ -3,9 +3,11 @@ using UnityEngine;
 using VRC.SDKBase;
 using TMPro;
 
+// This class kind of breaks SRP but well VRC isn't really SOLID friendly.
 [RequireComponent(typeof(Collider)), UdonBehaviourSyncMode(BehaviourSyncMode.None)]
 public class NarrativePlayer : UdonSharpBehaviour
 {
+    // These shouldn't be public but it is what it is...
     public GameObject container;
 
     public AudioSource audioSource;
@@ -14,10 +16,17 @@ public class NarrativePlayer : UdonSharpBehaviour
 
     public TMP_Text textComponent;
 
+    public GameObject playButton;
+    
+    public GameObject pauseButton;
 
-    bool isPlaying = false;
+    [Space]
+    public bool autoResume = false;
 
-    float playbackTime = 0;
+    
+    bool _isPlaying = false;
+
+    float _playbackTime = 0;
 
 
 #if UNITY_EDITOR
@@ -30,7 +39,7 @@ public class NarrativePlayer : UdonSharpBehaviour
 
     void Start()
     {
-        StopAndHide();
+        StopAndHidePlayer();
         HideText();
     }
 
@@ -41,7 +50,7 @@ public class NarrativePlayer : UdonSharpBehaviour
         if (!player.isLocal)
             return;
 
-        ShowAndResume();
+        ShowPlayerAndResume();
     }
 
     public override void OnPlayerTriggerExit(VRCPlayerApi player)
@@ -51,51 +60,58 @@ public class NarrativePlayer : UdonSharpBehaviour
         if (!player.isLocal)
             return;
 
-        StopAndHide();
+        StopAndHidePlayer();
     }
 
-    void ShowAndResume()
+    void ShowPlayerAndResume()
     {
         container.SetActive(true);
 
-        if (isPlaying)
+        if (autoResume && _isPlaying)
             Play();
+        else
+        {
+            playButton.SetActive(true);
+            pauseButton.SetActive(false);
+        }
     }
 
-    void StopAndHide()
+    void StopAndHidePlayer()
     {
-        Stop();
+        if (_isPlaying)
+        {
+            Stop();
 
-        if (isPlaying && playbackTime < Mathf.Epsilon)
-            isPlaying = false;
+            if (_playbackTime < Mathf.Epsilon) // Finished playing
+                _isPlaying = false;
+        }
 
         container.SetActive(false);
     }
 
     public void Play()
     {
-        audioSource.time = playbackTime;
+        audioSource.time = _playbackTime;
         audioSource.Play();
 
-        isPlaying = true;
+        _isPlaying = true;
     }
 
     public void Replay()
     {
-        playbackTime = 0;
+        _playbackTime = 0;
         Play();
     }
 
     public void Pause()
     {
         Stop();
-        
-        isPlaying = false;
+        _isPlaying = false;
     }
 
     void Stop()
     {
-        playbackTime = audioSource.time;
+        _playbackTime = audioSource.time;
         audioSource.Stop();
     }
 
