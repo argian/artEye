@@ -1,8 +1,11 @@
 fileFormatVersion: 2
-guid: a83ac0afe16fab24ab3cf182f6f8fb0a
+guid: 3a0cb4253b882f140a9a164f07fd54ba
 ModelImporter:
   serializedVersion: 19301
-  internalIDToNameTable: []
+  internalIDToNameTable:
+  - first:
+      74: -88723805440604879
+    second: Cylinder|CylinderAction
   externalObjects: {}
   materials:
     materialImportMode: 1
@@ -34,8 +37,8 @@ ModelImporter:
     isReadable: 0
   meshes:
     lODScreenPercentages: []
-    globalScale: 0.5
-    meshCompression: 2
+    globalScale: 1
+    meshCompression: 0
     addColliders: 0
     useSRGBMaterialColor: 1
     sortHierarchyByName: 1
@@ -81,7 +84,7 @@ ModelImporter:
     armStretch: 0.05
     legStretch: 0.05
     feetSpacing: 0
-    globalScale: 0.005
+    globalScale: 1
     rootMotionBoneName: 
     hasTranslationDoF: 0
     hasExtraRoot: 0
