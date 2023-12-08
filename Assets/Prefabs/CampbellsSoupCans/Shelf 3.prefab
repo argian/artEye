@@ -1,18 +1,5 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!65 &3625435348609964297
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 396899959842962215}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 0.050246872, y: 0.0101489285, z: 0.017385948}
-  m_Center: {x: -0.00012343645, y: 0.020000037, z: 0.007692976}
 --- !u!65 &510454198203773343
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -26,6 +13,19 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.010246869, y: 0.050148938, z: 0.017385948}
   m_Center: {x: -0.020123433, y: -1.4354906e-17, z: 0.007692976}
+--- !u!65 &3625435348609964297
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 396899959842962215}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.050246872, y: 0.0101489285, z: 0.017385948}
+  m_Center: {x: -0.00012343645, y: 0.020000037, z: 0.007692976}
 --- !u!65 &7519019446798832061
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -132,6 +132,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: -7511558181221131132, guid: dbbd87a250239f0419cfd26ff2135550,
+        type: 3}
+      propertyPath: m_Materials.Array.data[0]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5acabb134ec734b48b0237b3b3f6b05c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dbbd87a250239f0419cfd26ff2135550,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 5acabb134ec734b48b0237b3b3f6b05c, type: 2}
+    - target: {fileID: -7511558181221131132, guid: dbbd87a250239f0419cfd26ff2135550,
+        type: 3}
+      propertyPath: m_Materials.Array.data[2]
+      value: 
+      objectReference: {fileID: 2100000, guid: b7c9e387d79899f4ba3652e007e8e6d3, type: 2}
     - target: {fileID: 919132149155446097, guid: dbbd87a250239f0419cfd26ff2135550,
         type: 3}
       propertyPath: m_Name
