@@ -65,7 +65,12 @@ PrefabInstance:
     - target: {fileID: 3777592453878964088, guid: 4fe3b197aa3b0ec419bd2497427106d9,
         type: 3}
       propertyPath: m_Name
-      value: Can
+      value: Can 2c
+      objectReference: {fileID: 0}
+    - target: {fileID: 7682715594807029804, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8187123356499972601, guid: 4fe3b197aa3b0ec419bd2497427106d9,
         type: 3}

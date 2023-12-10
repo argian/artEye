@@ -7,10 +7,20 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1959115059554104767, guid: aff5107fafc182e47943b270824f711b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 5026832707227900651, guid: aff5107fafc182e47943b270824f711b,
         type: 3}
       propertyPath: m_Name
-      value: Can
+      value: Can 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5026832707227900651, guid: aff5107fafc182e47943b270824f711b,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 6826240936706621285, guid: aff5107fafc182e47943b270824f711b,
         type: 3}

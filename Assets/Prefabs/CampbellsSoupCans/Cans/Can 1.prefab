@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 2924339824099100900, guid: eb6d70ae6b2d16a4f93d8f82a7df87aa,
         type: 3}
       propertyPath: m_Name
-      value: Can
+      value: Can 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2924339824099100900, guid: eb6d70ae6b2d16a4f93d8f82a7df87aa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 3741400378415410538, guid: eb6d70ae6b2d16a4f93d8f82a7df87aa,
         type: 3}
@@ -66,6 +71,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8531962708491364272, guid: eb6d70ae6b2d16a4f93d8f82a7df87aa,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 6821892970700933915, guid: eb6d70ae6b2d16a4f93d8f82a7df87aa, type: 3}

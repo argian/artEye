@@ -10,7 +10,12 @@ PrefabInstance:
     - target: {fileID: 576588787730443276, guid: 41bdae37d9c605645871ae2153452bdd,
         type: 3}
       propertyPath: m_Name
-      value: Can
+      value: Can 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 576588787730443276, guid: 41bdae37d9c605645871ae2153452bdd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 1403218950089050498, guid: 41bdae37d9c605645871ae2153452bdd,
         type: 3}
@@ -66,6 +71,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6265277839848768344, guid: 41bdae37d9c605645871ae2153452bdd,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 9095327733206806515, guid: 41bdae37d9c605645871ae2153452bdd, type: 3}
