@@ -67,6 +67,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: Can 5c
       objectReference: {fileID: 0}
+    - target: {fileID: 4712725595011747217, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 862b41722a613aa4280413b2966c00f7, type: 2}
     - target: {fileID: 7682715594807029804, guid: 4fe3b197aa3b0ec419bd2497427106d9,
         type: 3}
       propertyPath: m_StaticEditorFlags

@@ -7,6 +7,11 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 516517329941680898, guid: e635cb56f7c40de4997579549b436545,
+        type: 3}
+      propertyPath: m_Materials.Array.data[1]
+      value: 
+      objectReference: {fileID: 2100000, guid: 2e6919338cb2859468c3289bee4cbb37, type: 2}
     - target: {fileID: 3230068376806321855, guid: e635cb56f7c40de4997579549b436545,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -79,4 +84,5 @@ PrefabInstance:
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 295029143842554388, guid: e635cb56f7c40de4997579549b436545, type: 3}
+    - {fileID: 6181335260764914220, guid: e635cb56f7c40de4997579549b436545, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: e635cb56f7c40de4997579549b436545, type: 3}
