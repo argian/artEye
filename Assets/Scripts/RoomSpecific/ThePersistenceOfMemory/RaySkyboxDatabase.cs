@@ -18,6 +18,11 @@ public class RaySkyboxDatabase : ShaderPasser
 	[SerializeField]
 	private float lerp;
 
+	public void Reset()
+	{
+		currentMarker = 0;
+		lerp = 0;
+	}
 
 	protected override void BakePropertyNames()
 	{
