@@ -18,24 +18,17 @@
         // Draw after all opaque geometry
         Tags {
             "RenderType" = "Transparent"
-            "Queue" = "Overlay-2001" //change it to correspond to scene!
+            "Queue" = "Geometry" //change it to correspond to scene!
             "LightMode" = "Always"
             "IgnoreProjector" = "True"
             "DisableBatching" = "True"
             "ForceNoShadowCasting" = "True"
-            "PreviewType" = "Plane"
             "VRCFallback" = "Hidden"
         }
 
-        ZWrite Off
+        ZWrite On
         ZTest LEqual
         Cull Off
-
-        // Grab the screen behind where object is rendered
-        GrabPass
-        {
-            "_GrabTex"
-        }
 
         Pass
         {
@@ -44,11 +37,10 @@
             #pragma fragment frag
             #include "UnityCG.cginc"
             #include "Assets/Shaders/General/RayTracing.cginc"
-            //#include "Assets/Shaders/General/UsefulCalculations.cginc"
 
             struct v2f
             {
-                float4 grabPos : TEXCOORD0;
+                float4 screenPos : TEXCOORD0;
                 float4 clipPos : SV_POSITION;
                 float4 ray : TEXCOORD1;
             };
@@ -67,21 +59,17 @@
             v2f vert(appdata_base v)
             {
                 v2f o;
-                UNITY_INITIALIZE_VERTEX_OUTPUT_STEREO(o);
                 //this magic gets screen uv
                 o.clipPos = UnityObjectToClipPos(v.vertex);
                 //yeah vr specialties stuff again
-                o.grabPos = ComputeNonStereoScreenPos(o.clipPos);
+                o.screenPos = ComputeScreenPos(o.clipPos);
                 //this thing calculates rayDir accordingly in vr
-                //(it is not normal way of doing that btw)
                 float4 worldPos = mul(unity_ObjectToWorld, v.vertex);
                 o.ray.xyz = worldPos.xyz - camera_pos.xyz;
                 o.ray.w = o.clipPos.w;
                 return o;
             }
 
-sampler2D _GrabTex;
-uniform vector HeadPos;
 uniform vector Spacing1;
 uniform vector Spacing2;
 uniform vector Spacing3;
@@ -101,7 +89,6 @@ vector CubeRoofScale;
 bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 scale, float3 spacing, inout float4 Hit, inout float3 Normals)
 {
     //space transformations to make several facing directions
-    //planePos = Rotate3DMatrix(planePos, facingDir);
     rayDir = Rotate3DMatrix(rayDir, facingDir);
 
     //actual object sequence
@@ -175,13 +162,11 @@ bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 s
 
 half4 frag(v2f i) : SV_Target
 {
-    float2 uv = i.grabPos.xy / i.grabPos.w;
-    half4 col = tex2D(_GrabTex, uv); //we need that later
+    float2 uv = i.screenPos.xy / i.screenPos.w;
 
     //well that is here for testing
-    col = half4(1, 1, 1, 1);
+     half4 col = half4(1, 1, 1, 1);
 
-    UNITY_SETUP_STEREO_EYE_INDEX_POST_VERTEX(i);
 
     float3 rayDir = normalize((i.ray.xyz / i.ray.w).xyz);
 
