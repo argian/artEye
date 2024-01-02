@@ -67,11 +67,21 @@ PrefabInstance:
       propertyPath: m_Name
       value: Can Variant
       objectReference: {fileID: 0}
+    - target: {fileID: 3777592453878964088, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 4712725595011747217, guid: 4fe3b197aa3b0ec419bd2497427106d9,
         type: 3}
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: e75cb947990b3d74bb782fe3b35d0528, type: 2}
+    - target: {fileID: 6513905479804955716, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 1406667453625113791, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}

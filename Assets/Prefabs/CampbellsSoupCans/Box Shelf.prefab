@@ -61,6 +61,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cardboardBox_03 (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_RootOrder
       value: 2
@@ -135,6 +139,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_Name
       value: cardboardBox_03
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_RootOrder
@@ -211,6 +219,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cardboardBox_03 (6)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_RootOrder
       value: 6
@@ -285,6 +297,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_Name
       value: cardboardBox_03 (4)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_RootOrder
@@ -452,6 +468,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: cardboardBox_03 (5)
       objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
+      objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_RootOrder
       value: 5
@@ -522,6 +542,10 @@ PrefabInstance:
     - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_Name
       value: cardboardBox_03 (3)
+      objectReference: {fileID: 0}
+    - target: {fileID: 100000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 4294967295
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: efbc7aaed080d31418251812fc4cfad8, type: 3}
       propertyPath: m_RootOrder
