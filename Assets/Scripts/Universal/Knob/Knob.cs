@@ -1,6 +1,7 @@
 ﻿
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UdonSharp;
 using UnityEngine;
 using UnityEngine.UI;
@@ -13,11 +14,11 @@ public class Knob : UdonSharpBehaviour
 {
 	[SerializeField] private float[] angles;
 	[SerializeField] private string[] values;
-
+	
 	[SerializeField] private float currentAngle;
 
 	// TODO debug variables
-	[SerializeField] private Text debugDisplay;
+	[SerializeField] private TextMeshPro debugDisplay;
 
 	public string GetValue()
 	{
@@ -46,11 +47,7 @@ public class Knob : UdonSharpBehaviour
 	public void SetAngle(float angle)
 	{
 		currentAngle = angle;
-	}
-	
-	// TODO only for debbuging
-	public override void Interact()
-	{
+		// TODO only for debbuging
 		debugDisplay.text = GetValue();
 	}
 }

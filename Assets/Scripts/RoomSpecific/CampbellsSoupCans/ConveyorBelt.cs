@@ -7,10 +7,17 @@ using VRC.Udon;
 public class ConveyorBelt : UdonSharpBehaviour
 {
     [SerializeField] private Vector3 direction;
-    [SerializeField] private float speed;
+    [SerializeField] private float force;
+    [SerializeField] private bool isOn = true;
 
     private void OnTriggerStay(Collider other)
     {
-        other.attachedRigidbody.MovePosition(other.transform.position + direction * speed * Time.deltaTime);
+        if (isOn)
+            other.attachedRigidbody.AddForce(direction * force * Time.deltaTime, ForceMode.Acceleration);
+    }
+
+    public void Activated(bool state)
+    {
+        isOn = state;
     }
 }
