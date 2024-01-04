@@ -7,15 +7,16 @@ using VRC.Udon;
 
 public class KnobHandle : UdonSharpBehaviour
 {
-    private Knob knob;
     private VRCObjectSync vrcObjectSync;
     private VRCPlayerApi vrcPlayerApi;
     private bool isHeld;
+    [SerializeField] private Knob knob;
     [SerializeField] private Transform model;
+    [SerializeField] private float minAngleLock;
+    [SerializeField] private float maxAngleLock;
 
     private void Start()
     {
-        knob = GetComponentInParent<Knob>();
         vrcObjectSync = GetComponent<VRCObjectSync>();
         vrcPlayerApi = Networking.LocalPlayer;
     }
@@ -25,9 +26,11 @@ public class KnobHandle : UdonSharpBehaviour
         if (!isHeld)
             return;
         
-        Vector3 rotation = model.rotation.eulerAngles;
-        rotation.z = transform.rotation.eulerAngles.z;
-        model.rotation = Quaternion.Euler(rotation);
+        Vector3 rotation = model.localRotation.eulerAngles;
+        rotation.z = Mathf.Clamp(transform.localRotation.eulerAngles.z, minAngleLock, maxAngleLock);
+        Debug.Log(rotation);
+        
+        model.localRotation = Quaternion.Euler(rotation);
         knob.SetAngle(rotation.z);
     }
 
