@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 3360755759113466536}
   - component: {fileID: 1804841859256777997}
   - component: {fileID: 4533120767836129735}
+  - component: {fileID: 7939860805872036461}
   m_Layer: 0
   m_Name: SM_cabinet
   m_TagString: Untagged
@@ -85,6 +86,19 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7939860805872036461
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2731465206210111506}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0416846, y: 1.9836863, z: 0.5493264}
+  m_Center: {x: -0.00000047683716, y: 0.99184734, z: -0.000000014901161}
 --- !u!1 &3282356264834113563
 GameObject:
   m_ObjectHideFlags: 0

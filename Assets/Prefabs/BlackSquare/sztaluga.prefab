@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 1547450493338595299}
   - component: {fileID: 2510331913239797830}
   - component: {fileID: 374514391404303500}
+  - component: {fileID: 7367040691014771570}
   m_Layer: 0
   m_Name: sztaluga
   m_TagString: Untagged
@@ -79,3 +80,16 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!65 &7367040691014771570
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2175932046655059289}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.09282558, y: 0.09316631, z: 0.27516523}
+  m_Center: {x: 0.013808375, y: 0, z: 0.13811786}
