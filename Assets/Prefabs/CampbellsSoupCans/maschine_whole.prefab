@@ -213,8 +213,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.009195052, y: 0.003772175, z: 0.0041945996}
-  m_Center: {x: 0.005402501, y: -0.018431481, z: 0.006378151}
+  m_Size: {x: 0.009195052, y: 0.001344379, z: 0.0041945996}
+  m_Center: {x: 0.0054025017, y: -0.017217558, z: 0.0063781515}
 --- !u!1 &1670690934082809328
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,12 +544,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3379810357675492394}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.015775349, z: 0.055522274}
-  m_Center: {x: 0.00018090816, y: -0.06853944, z: -0.028802507}
+  m_Size: {x: 0.0014539892, y: 0.015775349, z: 0.04058565}
+  m_Center: {x: 0.00018090793, y: -0.06853944, z: -0.03627096}
 --- !u!114 &2764703337463758774
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -573,8 +573,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 5129177390841486417}
   direction: {x: 0, y: 0, z: 1}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 7676372579349754654}
 --- !u!114 &5129177390841486417
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -641,7 +642,7 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3639293452402571396}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
@@ -670,8 +671,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 1434657618981148322}
   direction: {x: 0, y: 0, z: 1}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 1979047378907889385}
 --- !u!114 &1434657618981148322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -738,12 +740,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3669943948382774848}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.062413428, z: 0.015374406}
-  m_Center: {x: 0.00018089647, y: 0.034842838, z: -0.008728621}
+  m_Size: {x: 0.0014539892, y: 0.046143353, z: 0.015374406}
+  m_Center: {x: 0.00018089745, y: 0.026707774, z: -0.008728623}
 --- !u!114 &5535559731357893347
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -767,8 +769,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 6763158336758495974}
   direction: {x: -1, y: 0, z: 0}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 6958118851580317518}
 --- !u!114 &6763158336758495974
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -914,12 +917,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 5111738945896764001}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.014654495, z: 0.13857736}
-  m_Center: {x: 0.00018091899, y: -0.14867851, z: 0.011854083}
+  m_Size: {x: 0.0014539892, y: 0.014654495, z: 0.12277773}
+  m_Center: {x: 0.00018091928, y: -0.1486785, z: 0.019753998}
 --- !u!114 &4609487194832907191
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -943,8 +946,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 7207425649119690537}
   direction: {x: 0, y: 0, z: -1}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 8682987289004835010}
 --- !u!114 &7207425649119690537
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1045,12 +1049,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6338312630898848966}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.09572596, z: 0.015836515}
-  m_Center: {x: 0.00018088763, y: 0.09837695, z: -0.048714105}
+  m_Size: {x: 0.0014539892, y: 0.08001782, z: 0.015836515}
+  m_Center: {x: 0.00018088857, y: 0.09052284, z: -0.0487141}
 --- !u!114 &6234611837495244848
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1074,8 +1078,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 4896694858974962580}
   direction: {x: -1, y: 0, z: 0}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 1376922171119154954}
 --- !u!114 &4896694858974962580
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1142,12 +1147,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 6432069717748262684}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.0415117, z: 0.015374406}
-  m_Center: {x: 0.00018090727, y: -0.05567117, z: -0.008728588}
+  m_Size: {x: 0.0014539892, y: 0.05244255, z: 0.015374406}
+  m_Center: {x: 0.00018090662, y: -0.05020571, z: -0.008728591}
 --- !u!114 &8381104917524023807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1171,8 +1176,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 7054357847646983410}
   direction: {x: -1, y: 0, z: 0}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 3487328220358831581}
 --- !u!114 &7054357847646983410
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1239,12 +1245,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7082985348828786821}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.09535373, z: 0.01571629}
-  m_Center: {x: 0.00018091228, y: -0.10832876, z: -0.048705358}
+  m_Size: {x: 0.0014539892, y: 0.07945644, z: 0.015716294}
+  m_Center: {x: 0.00018091322, y: -0.1162773, z: -0.048705354}
 --- !u!114 &677732775191287986
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1268,8 +1274,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 7232361111259170529}
   direction: {x: -1, y: 0, z: 0}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 7541602568845183580}
 --- !u!114 &7232361111259170529
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1415,12 +1422,12 @@ BoxCollider:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 8082649223298915865}
-  m_Material: {fileID: 13400000, guid: 74a1ae38f4d2d6b47bc51f8be9734686, type: 2}
+  m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.0014539892, y: 0.015535444, z: 0.05559048}
-  m_Center: {x: 0.00018089305, y: 0.058281813, z: -0.028836694}
+  m_Size: {x: 0.0014539892, y: 0.015535444, z: 0.040196978}
+  m_Center: {x: 0.00018089329, y: 0.058281813, z: -0.021139935}
 --- !u!114 &6810302569838141955
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1444,8 +1451,9 @@ MonoBehaviour:
     SerializationNodes: []
   _udonSharpBackingUdonBehaviour: {fileID: 5995677393069738557}
   direction: {x: 0, y: 0, z: -1}
-  force: 200
+  speed: 1
   isOn: 1
+  c: {fileID: 2469162641998698832}
 --- !u!114 &5995677393069738557
 MonoBehaviour:
   m_ObjectHideFlags: 0

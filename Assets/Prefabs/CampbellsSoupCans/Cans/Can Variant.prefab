@@ -7,6 +7,12 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: -3051603660186761462, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: -3051603660186761462, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
     - target: {fileID: 3392895055976217334, guid: 4fe3b197aa3b0ec419bd2497427106d9,
         type: 3}
       propertyPath: m_RootOrder
@@ -83,5 +89,10 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 1406667453625113791, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
+    - {fileID: 0}
+    - {fileID: 4948962771344410720, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
+    - {fileID: 8969365771253075706, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
+    - {fileID: 393619613968919794, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
+    - {fileID: 2540624538704672642, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
+    - {fileID: 8831473901624612731, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}

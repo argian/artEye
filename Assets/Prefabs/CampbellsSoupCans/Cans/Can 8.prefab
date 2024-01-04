@@ -83,6 +83,12 @@ PrefabInstance:
       value: 4294967295
       objectReference: {fileID: 0}
     m_RemovedComponents:
-    - {fileID: 6022849371064056402, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
-    - {fileID: 163767092856224362, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
+    - {fileID: 0}
+    - {fileID: 0}
+    - {fileID: 6156019087440326325, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
+    - {fileID: 7906415976033036335, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
+    - {fileID: 3639666455967666519, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
+    - {fileID: 1492599271382583847, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
+    - {fileID: 7732433642199036334, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
+    - {fileID: 1343906801827823617, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 4ecd258a589805246b4914bdbcba9c10, type: 3}

@@ -17,9 +17,6 @@ public class Knob : UdonSharpBehaviour
 	
 	[SerializeField] private float currentAngle;
 
-	// TODO debug variables
-	[SerializeField] private TextMeshPro debugDisplay;
-
 	public string GetValue()
 	{
 		return values[FindNearestAngle(currentAngle)];
@@ -47,7 +44,5 @@ public class Knob : UdonSharpBehaviour
 	public void SetAngle(float angle)
 	{
 		currentAngle = angle;
-		// TODO only for debbuging
-		debugDisplay.text = GetValue();
 	}
 }
