@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 5699054168575862338}
   - component: {fileID: 7476033441114251016}
   - component: {fileID: 6261568014146960284}
+  - component: {fileID: 4928181939724673653}
   m_Layer: 0
   m_Name: Black Square Wall
   m_TagString: Untagged
@@ -79,3 +80,17 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &4928181939724673653
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576197768071509369}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -2432090755550338912, guid: 7095ab1a684abee4eb704cb473954ae8, type: 3}
