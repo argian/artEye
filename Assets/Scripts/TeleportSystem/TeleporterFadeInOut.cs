@@ -48,6 +48,8 @@ public class TeleporterFadeInOut : ShaderPasser
             case TeleporterStatus.None:
                 return;
             case TeleporterStatus.TeleportIn:
+                faceCube.gameObject.SetActive(true);
+
                 if (fadeValue < 1)
                     fadeValue += Time.deltaTime / fadeDuration;
 
@@ -68,6 +70,7 @@ public class TeleporterFadeInOut : ShaderPasser
                     teleporterStatus = TeleporterStatus.None;
                     fadeValue = 0;
                     chosenTeleporter = null;
+                    faceCube.gameObject.SetActive(false);
                 }
                 break;
         }
