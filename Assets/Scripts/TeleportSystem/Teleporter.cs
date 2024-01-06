@@ -1,6 +1,4 @@
-﻿using System;
-using System.Collections;
-using UdonSharp;
+﻿using UdonSharp;
 using UnityEngine;
 using VRC.SDKBase;
 
@@ -22,7 +20,7 @@ public class Teleporter : UdonSharpBehaviour
 
     public override void Interact()
     {
-        if (teleporterFadeInOut)
+        if (teleporterFadeInOut && teleporterFadeInOut.gameObject.activeSelf)
             teleporterFadeInOut.TeleportPlayerWithFade(this);
         else
             TeleportPlayer();
