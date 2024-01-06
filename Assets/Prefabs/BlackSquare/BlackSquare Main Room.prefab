@@ -4309,6 +4309,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hanging lamp (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 1100007317729912673, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431237209056499888, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5848072725123213051, guid: 799aefafe6aaaf54db85c62ee0ba8980,
         type: 3}
       propertyPath: m_RootOrder
@@ -4378,6 +4388,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543307231453769603, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799aefafe6aaaf54db85c62ee0ba8980, type: 3}
@@ -4495,7 +4510,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 8f02e5c41128b6b4b948dbf5c8ee2fa9, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 4294967295
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8f02e5c41128b6b4b948dbf5c8ee2fa9, type: 3}
       propertyPath: m_RootOrder
@@ -5343,6 +5358,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hanging lamp
       objectReference: {fileID: 0}
+    - target: {fileID: 1100007317729912673, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431237209056499888, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5848072725123213051, guid: 799aefafe6aaaf54db85c62ee0ba8980,
         type: 3}
       propertyPath: m_RootOrder
@@ -5412,6 +5437,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543307231453769603, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799aefafe6aaaf54db85c62ee0ba8980, type: 3}
@@ -5649,7 +5679,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 100000, guid: 34d85e42fbfa9864fb198a96de2ae643, type: 3}
       propertyPath: m_StaticEditorFlags
-      value: 0
+      value: 126
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 34d85e42fbfa9864fb198a96de2ae643, type: 3}
       propertyPath: m_RootOrder
@@ -6027,6 +6057,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: Hanging lamp (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 1100007317729912673, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
+    - target: {fileID: 4431237209056499888, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
+      objectReference: {fileID: 0}
     - target: {fileID: 5848072725123213051, guid: 799aefafe6aaaf54db85c62ee0ba8980,
         type: 3}
       propertyPath: m_RootOrder
@@ -6096,6 +6136,11 @@ PrefabInstance:
         type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8543307231453769603, guid: 799aefafe6aaaf54db85c62ee0ba8980,
+        type: 3}
+      propertyPath: m_StaticEditorFlags
+      value: 126
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 799aefafe6aaaf54db85c62ee0ba8980, type: 3}
