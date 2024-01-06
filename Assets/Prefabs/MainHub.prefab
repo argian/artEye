@@ -1467,7 +1467,7 @@ Transform:
   - {fileID: 7411358357001712558}
   - {fileID: 4114516770577943206}
   m_Father: {fileID: 6330027930561252617}
-  m_RootOrder: 12
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1013017923014492934
 GameObject:
@@ -1498,7 +1498,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6330027930561252617}
-  m_RootOrder: 9
+  m_RootOrder: 10
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!220 &109182630421179395
 LightProbeGroup:
@@ -6416,7 +6416,7 @@ Transform:
   - {fileID: 3063314377280351287}
   - {fileID: 1246253863348642269}
   m_Father: {fileID: 6330027930561252617}
-  m_RootOrder: 11
+  m_RootOrder: 12
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3532704844199598535
 GameObject:
@@ -10784,6 +10784,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1342761067327143822}
+  - {fileID: 1244385538473970812}
   - {fileID: 7625898701180210572}
   - {fileID: 7625898702822465423}
   - {fileID: 1084831032649407814}
@@ -10844,7 +10845,8 @@ MonoBehaviour:
   AllowCollisionOwnershipTransfer: 0
   Reliable: 0
   _syncMethod: 2
-  serializedProgramAsset: {fileID: 0}
+  serializedProgramAsset: {fileID: 11400000, guid: a8867b99f68b995478ec27585f820a2b,
+    type: 2}
   programSource: {fileID: 11400000, guid: 136368a2f9895594186b41928004a31b, type: 2}
   serializedPublicVariablesBytesString: Ai8AAAAAATIAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAFQAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AAAAAAAYBAAAAAAAAACcBBAAAAHQAeQBwAGUAAWgAAABTAHkAcwB0AGUAbQAuAEMAbwBsAGwAZQBjAHQAaQBvAG4AcwAuAEcAZQBuAGUAcgBpAGMALgBMAGkAcwB0AGAAMQBbAFsAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4ALgBJAG4AdABlAHIAZgBhAGMAZQBzAC4ASQBVAGQAbwBuAFYAYQByAGkAYQBiAGwAZQAsACAAVgBSAEMALgBVAGQAbwBuAC4AQwBvAG0AbQBvAG4AXQBdACwAIABtAHMAYwBvAHIAbABpAGIAAQEJAAAAVgBhAHIAaQBhAGIAbABlAHMALwEAAAABaAAAAFMAeQBzAHQAZQBtAC4AQwBvAGwAbABlAGMAdABpAG8AbgBzAC4ARwBlAG4AZQByAGkAYwAuAEwAaQBzAHQAYAAxAFsAWwBWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAEkAbgB0AGUAcgBmAGEAYwBlAHMALgBJAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlACwAIABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgBdAF0ALAAgAG0AcwBjAG8AcgBsAGkAYgABAAAABgEAAAAAAAAAAi8CAAAAAUkAAABWAFIAQwAuAFUAZABvAG4ALgBDAG8AbQBtAG8AbgAuAFUAZABvAG4AVgBhAHIAaQBhAGIAbABlAGAAMQBbAFsAUwB5AHMAdABlAG0ALgBJAG4AdAAzADIALAAgAG0AcwBjAG8AcgBsAGkAYgBdAF0ALAAgAFYAUgBDAC4AVQBkAG8AbgAuAEMAbwBtAG0AbwBuAAIAAAAGAgAAAAAAAAAnAQQAAAB0AHkAcABlAAEXAAAAUwB5AHMAdABlAG0ALgBTAHQAcgBpAG4AZwAsACAAbQBzAGMAbwByAGwAaQBiACcBCgAAAFMAeQBtAGIAbwBsAE4AYQBtAGUAAR8AAABfAF8AXwBVAGQAbwBuAFMAaABhAHIAcABCAGUAaABhAHYAaQBvAHUAcgBWAGUAcgBzAGkAbwBuAF8AXwBfACcBBAAAAHQAeQBwAGUAARYAAABTAHkAcwB0AGUAbQAuAEkAbgB0ADMAMgAsACAAbQBzAGMAbwByAGwAaQBiABcBBQAAAFYAYQBsAHUAZQACAAAABwUHBQcF
   publicVariablesUnityEngineObjects: []
@@ -12785,7 +12787,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6330027930561252617}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!192 &1037974743658944915
 OcclusionArea:
@@ -14492,7 +14494,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 6330027930561252617}
-  m_RootOrder: 10
+  m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!220 &4174746211693025809
 LightProbeGroup:
@@ -16152,7 +16154,7 @@ PrefabInstance:
     - target: {fileID: 7693359068950559321, guid: b96ddf59ac6cc984092369b193aa3d1a,
         type: 3}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7693359068950559321, guid: b96ddf59ac6cc984092369b193aa3d1a,
         type: 3}
@@ -16290,7 +16292,7 @@ PrefabInstance:
     - target: {fileID: 4599454229422034395, guid: be4c4baed9980e04b858cde553d42b21,
         type: 3}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 4599454229422034395, guid: be4c4baed9980e04b858cde553d42b21,
         type: 3}
@@ -16372,7 +16374,7 @@ PrefabInstance:
     - target: {fileID: 4472809941050065482, guid: 3b53d23a46d050d458ec5860175a0338,
         type: 3}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 4472809941050065482, guid: 3b53d23a46d050d458ec5860175a0338,
         type: 3}
@@ -16492,7 +16494,7 @@ PrefabInstance:
     - target: {fileID: 746395051776253467, guid: bdae991d87c70cb459a443211d0a0327,
         type: 3}
       propertyPath: m_RootOrder
-      value: 6
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 746395051776253467, guid: bdae991d87c70cb459a443211d0a0327,
         type: 3}
@@ -16590,7 +16592,7 @@ PrefabInstance:
     - target: {fileID: 3100350320955592500, guid: 25216914e88ff814c910f182243cbfe7,
         type: 3}
       propertyPath: m_RootOrder
-      value: 8
+      value: 9
       objectReference: {fileID: 0}
     - target: {fileID: 3100350320955592500, guid: 25216914e88ff814c910f182243cbfe7,
         type: 3}
@@ -16691,6 +16693,326 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 5763716802384286362}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6105932418594858767
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 6330027930561252617}
+    m_Modifications:
+    - target: {fileID: 453940741675427400, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1833610329185853242, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMin.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2050795825322632147, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2362818746312838603, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2967644826289356865, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4133281084294514158, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchoredPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4484700891723091896, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853873, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_Name
+      value: Credits
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853874, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: serializedProgramAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 370d3eaeb462d2146be6dd12725c5887,
+        type: 2}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 2.85
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -17.9
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0.7071068
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 90
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: text
+      value: "<b>Creators:</b>\nProducer\r\n- Michalina Rawicka\nCo-Producer &\nLead
+        Unity Developer\r\n- Micha\u0142 Biernat\nLead Designer &\nShader Programmer\r\n-
+        Adam Migdalski\nUnity Developer \r\n- Pawe\u0142 Kr\xF3l\nLevel Artist &
+        Designer \r\n- Anna Hosumbek\n3D Artist \n- Patryk Wa\u0142aszek\nLead Narrative
+        Designer &\nScreenwriter\r\n- Wojciech Matuszewski\nConcept Artist &\nLevel
+        Designer\n- Sandra Szyma\u0144ska\r\nWriter & Editor\n- Eli\u0161ka Soukupov\xE1\nEditors\n-
+        Maja Duszak\n- Zuzanna Adamowicz\n\r\n<b>Sponza\r:</b>\nhttps://github.com/Unity-Technologies/Classic-Sponza/tree/main#credits\r\nhttps://github.com/Unity-Technologies/Classic-Sponza/blob/main/Third
+        Party Notices.md\r\n\r\n<b>Models:</b>\r\n\"Door\" (https://skfb.ly/6TVsT)
+        by Zian is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+        \r\n\"Aged 4-Piece Furniture Set\" (https://skfb.ly/oNJJF) by Glowbox 3D
+        is licensed under Creative Commons Attribution (https://creativecommons.org/licenses/by/4.0/).\r\n\"Red
+        Curtain\" (https://skfb.ly/oxRBu) by fella' is licensed under Creative Commons
+        Attribution (https://creativecommons.org/licenses/by/4.0/).\r\n\"Stage Curtains\"
+        (https://skfb.ly/6D7TS) by daedaljs is licensed under Creative Commons Attribution
+        (https://creativecommons.org/licenses/by/4.0/).\r\n\"Wooden table (low poly)\"
+        (https://skfb.ly/oKSBO) by Andrey 3D is licensed under Creative Commons Attribution
+        (https://creativecommons.org/licenses/by/4.0/).\r\n \r\n<b>Textures:</b>\r\n\"Beige
+        Wall 001\" (https://polyhaven.com/a/beige_wall_001) by Dimitrios Savva and
+        Rico Cilliers is licensed under Creative Commons CC0 1.0 Universal License
+        (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Painted Bricks
+        003\" (ambientCG.com/a/PaintedBricks003) is licensed under Creative Commons
+        CC0 1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Planks
+        037 A (with screws)\" (ambientCG.com/a/Planks037A) is licensed under Creative
+        Commons CC0 1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Plaster
+        001\" (ambientCG.com/a/Plaster001) is licensed under Creative Commons CC0
+        1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Plastic
+        015 A\" (ambientCG.com/a/Plastic015A) is licensed under Creative Commons
+        CC0 1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Tiles
+        074\" (ambientCG.com/a/Tiles074) is licensed under Creative Commons CC0 1.0
+        Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Tiles
+        107\" (ambientCG.com/a/Tiles107) is licensed under Creative Commons CC0 1.0
+        Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Wood
+        027\" (ambientCG.com/a/Wood027) is licensed under Creative Commons CC0 1.0
+        Universal License (https://creativecommons.org/publicdomain/zero/1.0/). Models\r\n\r\nRest
+        of non-custom made assets are licensed under Unity Standard Asset Store EULA"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: hideText
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: playButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: pauseButton
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 5041871191568853877, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+    - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_text
+      value: "<b>Creators:</b>\nProducer\r\n- Michalina Rawicka\nCo-Producer &\nLead
+        Unity Developer\r\n- Micha\u0142 Biernat\nLead Designer &\nShader Programmer\r\n-
+        Adam Migdalski\nUnity Developer \r\n- Pawe\u0142 Kr\xF3l\nLevel Artist &
+        Designer \r\n- Anna Hosumbek\n3D Artist \n- Patryk Wa\u0142aszek\nLead Narrative
+        Designer &\nScreenwriter\r\n- Wojciech Matuszewski\nConcept Artist &\nLevel
+        Designer\n- Sandra Szyma\u0144ska\r\nWriter & Editor\n- Eli\u0161ka Soukupov\xE1\nEditors\n-
+        Maja Duszak\n- Zuzanna Adamowicz\n\r\n<b>Sponza\r:</b>\nhttps://github.com/Unity-Technologies/Classic-Sponza/tree/main#credits\r\nhttps://github.com/Unity-Technologies/Classic-Sponza/blob/main/Third
+        Party Notices.md\r\n\r\n<b>Models:</b>\r\n\"Door\" (https://skfb.ly/6TVsT)
+        by Zian is licensed under Creative Commons Attribution (http://creativecommons.org/licenses/by/4.0/).
+        \r\n\"Aged 4-Piece Furniture Set\" (https://skfb.ly/oNJJF) by Glowbox 3D
+        is licensed under Creative Commons Attribution (https://creativecommons.org/licenses/by/4.0/).\r\n\"Red
+        Curtain\" (https://skfb.ly/oxRBu) by fella' is licensed under Creative Commons
+        Attribution (https://creativecommons.org/licenses/by/4.0/).\r\n\"Stage Curtains\"
+        (https://skfb.ly/6D7TS) by daedaljs is licensed under Creative Commons Attribution
+        (https://creativecommons.org/licenses/by/4.0/).\r\n\"Wooden table (low poly)\"
+        (https://skfb.ly/oKSBO) by Andrey 3D is licensed under Creative Commons Attribution
+        (https://creativecommons.org/licenses/by/4.0/).\r\n \r\n<b>Textures:</b>\r\n\"Beige
+        Wall 001\" (https://polyhaven.com/a/beige_wall_001) by Dimitrios Savva and
+        Rico Cilliers is licensed under Creative Commons CC0 1.0 Universal License
+        (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Painted Bricks
+        003\" (ambientCG.com/a/PaintedBricks003) is licensed under Creative Commons
+        CC0 1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Planks
+        037 A (with screws)\" (ambientCG.com/a/Planks037A) is licensed under Creative
+        Commons CC0 1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Plaster
+        001\" (ambientCG.com/a/Plaster001) is licensed under Creative Commons CC0
+        1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Plastic
+        015 A\" (ambientCG.com/a/Plastic015A) is licensed under Creative Commons
+        CC0 1.0 Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Tiles
+        074\" (ambientCG.com/a/Tiles074) is licensed under Creative Commons CC0 1.0
+        Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Tiles
+        107\" (ambientCG.com/a/Tiles107) is licensed under Creative Commons CC0 1.0
+        Universal License (https://creativecommons.org/publicdomain/zero/1.0/).\r\n\"Wood
+        027\" (ambientCG.com/a/Wood027) is licensed under Creative Commons CC0 1.0
+        Universal License (https://creativecommons.org/publicdomain/zero/1.0/). Models\r\n\r\nRest
+        of non-custom made assets are licensed under Unity Standard Asset Store EULA"
+      objectReference: {fileID: 0}
+    - target: {fileID: 5042882148406605526, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_isRightToLeft
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5086260511080352453, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6067081859838472116, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMin.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7401943887427379651, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 75
+      objectReference: {fileID: 0}
+    - target: {fileID: 7455008066456517664, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_Size
+      value: 0.11166129
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575754104050635033, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575754104050635033, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575754104050635033, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_SizeDelta.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7575754104050635033, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586467530230733931, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7586467530230733931, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7867174271152199327, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_SizeDelta.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9194656709523825980, guid: bd716b9937445eb46898034191657175,
+        type: 3}
+      propertyPath: m_Size
+      value: 0.9999996
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: bd716b9937445eb46898034191657175, type: 3}
+--- !u!4 &1244385538473970812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
+    type: 3}
+  m_PrefabInstance: {fileID: 6105932418594858767}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6330027929790013839
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -16706,7 +17028,7 @@ PrefabInstance:
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 1
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
@@ -16825,7 +17147,7 @@ PrefabInstance:
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4471059212278623235, guid: 5bb5b169761c8c84ba8672c8572a260d,
         type: 3}
@@ -16964,7 +17286,7 @@ PrefabInstance:
     - target: {fileID: 1848320249991441175, guid: bc3ca5e3e02b2c94399756f0a0078962,
         type: 3}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1848320249991441175, guid: bc3ca5e3e02b2c94399756f0a0078962,
         type: 3}

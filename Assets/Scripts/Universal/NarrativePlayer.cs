@@ -21,8 +21,9 @@ public class NarrativePlayer : UdonSharpBehaviour
     public GameObject pauseButton;
 
     [Space]
-    public bool autoResume = false;
+    public bool hideText = true;
 
+    public bool autoResume = false;
     
     bool _isPlaying = false;
 
@@ -40,7 +41,9 @@ public class NarrativePlayer : UdonSharpBehaviour
     void Start()
     {
         StopAndHidePlayer();
-        HideText();
+        
+        if (hideText)
+            HideText();
     }
 
     public override void OnPlayerTriggerEnter(VRCPlayerApi player)
@@ -71,8 +74,10 @@ public class NarrativePlayer : UdonSharpBehaviour
             Play();
         else
         {
-            playButton.SetActive(true);
-            pauseButton.SetActive(false);
+            if (playButton != null)
+                playButton.SetActive(true);
+            if (pauseButton != null)
+                pauseButton.SetActive(false);
         }
     }
 
