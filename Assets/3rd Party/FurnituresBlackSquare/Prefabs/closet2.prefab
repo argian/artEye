@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 197981773072162574}
   - component: {fileID: 3823702090546991275}
   - component: {fileID: 1365843593677775969}
-  - component: {fileID: 3085304314471091949}
+  - component: {fileID: 5890414839652283861}
   m_Layer: 0
   m_Name: closet2
   m_TagString: Untagged
@@ -80,8 +80,8 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
---- !u!64 &3085304314471091949
-MeshCollider:
+--- !u!65 &5890414839652283861
+BoxCollider:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -90,7 +90,6 @@ MeshCollider:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  serializedVersion: 4
-  m_Convex: 0
-  m_CookingOptions: 30
-  m_Mesh: {fileID: -8800049534693569207, guid: 28a7de13a6369f846bf6d64963e8fa43, type: 3}
+  serializedVersion: 2
+  m_Size: {x: 0.8709494, y: 1.0312767, z: 0.68574625}
+  m_Center: {x: 0, y: 0.5226214, z: 0}
