@@ -45,7 +45,11 @@ public class RaySkyboxDatabase : ShaderPasser
 	protected override void FakeStart()
     {
 		localPlayer = Networking.LocalPlayer;
-    }
+
+		MainMaterial.SetVector(PropertyIDs[0], new Vector4(0.1f, YScale, 0.1f, lerp));
+		MainMaterial.SetVector(PropertyIDs[1], new Vector4(0.1f, YScale, 0.1f, lerp));
+		MainMaterial.SetVector(PropertyIDs[2], new Vector4(0.1f, YScale, 0.1f, lerp));
+	}
 
 	protected override void PassToRender()
 	{
@@ -67,6 +71,7 @@ public class RaySkyboxDatabase : ShaderPasser
 
 		lerp = lerp < 0 ? 0 : lerp;
 		lerp = lerpCurve.Evaluate(lerp);
+		lerp = Mathf.Clamp(lerp, 0.1f, 1f);
 		MainMaterial.SetVector(PropertyIDs[currentMarker], new Vector4(lerp, YScale, lerp, lerp));
 
 		for (int i = 0; i < clockAnimators.Length; i++)
