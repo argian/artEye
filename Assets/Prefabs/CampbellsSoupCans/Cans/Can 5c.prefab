@@ -72,6 +72,12 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[1]
       value: 
       objectReference: {fileID: 2100000, guid: 862b41722a613aa4280413b2966c00f7, type: 2}
+    - target: {fileID: 4948962771344410720, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: serializationData.Prefab
+      value: 
+      objectReference: {fileID: 4948962771344410720, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
     - target: {fileID: 7682715594807029804, guid: 4fe3b197aa3b0ec419bd2497427106d9,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -82,5 +88,11 @@ PrefabInstance:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 862b41722a613aa4280413b2966c00f7, type: 2}
+    - target: {fileID: 8969365771253075706, guid: 4fe3b197aa3b0ec419bd2497427106d9,
+        type: 3}
+      propertyPath: serializedProgramAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 7f5f278860dd2514d9aebd6b78bf924d,
+        type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 4fe3b197aa3b0ec419bd2497427106d9, type: 3}
