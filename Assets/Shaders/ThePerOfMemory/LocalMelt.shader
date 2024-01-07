@@ -5,6 +5,7 @@
         _CenterPos("CenterPos", vector) = (0, 0, 0, 0)
         _Color ("Color", Color) = (1,1,1,1)
         _MainTex ("Albedo (RGB)", 2D) = "white" {}
+        _NoiseScale ("_NoiseScale", vector) = (1, 1, 1, 1)
         _Glossiness ("Smoothness", Range(0,1)) = 0.5
         _Metallic ("Metallic", Range(0,1)) = 0.0
     }
@@ -12,10 +13,11 @@
     {
         Tags { "RenderType"="Opaque" }
         LOD 200
+        Cull Off
 
         CGPROGRAM
         // Physically based Standard lighting model, and enable shadows on all light types
-        #pragma surface surf Standard vertex:vert fullforwardshadows
+        #pragma surface surf Standard vertex:vert fullforwardshadows forcenoshadowcasting
 
         // Use shader model 3.0 target, to get nicer looking lighting
         #pragma target 3.0
@@ -27,13 +29,13 @@
         struct Input
         {
             float2 uv_MainTex;
-            float4 worldPos;
         };
 
         half _Glossiness;
         half _Metallic;
         fixed4 _Color;
-        float4 _CenterPos;
+        uniform float4 _CenterPos;
+        float4 _NoiseScale;
 
         // Add instancing support for this shader. You need to check 'Enable Instancing' on materials that use the shader.
         // See https://docs.unity3d.com/Manual/GPUInstancing.html for more information about instancing.
@@ -48,7 +50,8 @@
             //o.worldPos = float4(mul(unity_ObjectToWorld, v.vertex).xyz, 1);
             float3 worldPos = mul(unity_ObjectToWorld, v.vertex).xyz;
             float3 centeredPos = worldPos - _CenterPos;
-            worldPos.y -= GradientNoise(centeredPos) * -min(0, centeredPos.y);
+            centeredPos.z += _Time * _NoiseScale.w;
+            worldPos.y -= (GradientNoise(centeredPos / _NoiseScale.xyz) + 1) * -min(0, centeredPos.y);
             //world to vertex pos:
             v.vertex.xyz = mul(unity_WorldToObject, float4(worldPos, 1));
         }

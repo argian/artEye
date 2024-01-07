@@ -5,6 +5,14 @@
         //spacing("spacing", vector) = (1,1,1,1)
         LightDir("LightDir", vector) = (0, 0, 0, 1)
         FacingDir("FacingDir", vector) = (0, 0, 1, 1)
+        CubeCol("CubeCol", Color) = (0, 0, 0, 0)
+        CubeCol2("CubeCol2", Color) = (0, 0, 0, 0)
+        CubeCol3("CubeCol3", Color) = (0, 0, 0, 0)
+        CubeCol4("CubeCol4", Color) = (0, 0, 0, 0)
+        CubeCol5("CubeCol5", Color) = (0, 0, 0, 0)
+        CubeCol6("CubeCol6", Color) = (0, 0, 0, 0)
+        BackgruoundUp("BackgruoundUp", Color) = (0, 0, 0, 0)
+        BackgruoundDown("BackgruoundDown", Color) = (0, 0, 0, 0)
         MainGroundPos("MainGroundPos", vector) = (0, 0, 0, 0)
         CubeWallPos("CubeWallPos", vector) = (0, 0, 0, 1)
         CubeWallDir("CubeWallDir", vector) = (0, 0, 1, 1)
@@ -83,10 +91,16 @@ vector CubeWallScale;
 vector CubeRoofPos;
 vector CubeRoofDir;
 vector CubeRoofScale;
+vector CubeCol;
+vector CubeCol2;
+vector CubeCol3;
+vector CubeCol4;
+vector CubeCol5;
+vector CubeCol6;
 
 //rayPos is not used, player is fixed as if he is in "center" of world
 //NOTE TO SELF: CHANGE RESULT NORMALS BASED ON FACING DIR
-bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 scale, float3 spacing, inout float4 Hit, inout float3 Normals)
+float4 CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 scale, float3 spacing, inout float4 Hit, inout float3 Normals, float4 Col1, float4 Col2)
 {
     //space transformations to make several facing directions
     rayDir = Rotate3DMatrix(rayDir, facingDir);
@@ -94,13 +108,12 @@ bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 s
     //actual object sequence
     if (SimplePlane(rayDir, planePos, scale, Hit))
     {
-        //if (SimpleCheckboard(Hit, spacing.xyz))
-        if (false)
+        if (SimpleCheckboard(Hit, spacing.xyz))
         {
             //col.xyz = half4(0.8, 0.2, 0.6, 1);
             Normals = Rotate3DMatrix(float3(1, 1, 0), facingDir);
             Hit.w = 1;
-            return true;
+            return Col1;
         }
         else
         {
@@ -126,7 +139,7 @@ bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 s
             if (SimpleCube(nearestHit, Hit, rayDir, spacing.xyz / 2, Normals))
             {
                 Hit.w = 1;
-                return true;
+                return Col2;
             }
 
             //*
@@ -142,7 +155,7 @@ bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 s
             if (SimpleCube(nearestHit, Hit, rayDir, spacing.xyz / 2, Normals))
             {
                 Hit.w = 1;
-                return true;
+                return Col2;
             }
             //*/
         }
@@ -157,8 +170,11 @@ bool CubePatternPlane(float3 rayDir, float3 planePos, float3 facingDir, float3 s
     }
     */
 
-    return false;
+    return float4(0, 0, 0, 1);
 }
+
+vector BackgruoundUp;
+vector BackgruoundDown;
 
 half4 frag(v2f i) : SV_Target
 {
@@ -170,49 +186,44 @@ half4 frag(v2f i) : SV_Target
 
     float3 rayDir = normalize((i.ray.xyz / i.ray.w).xyz);
 
-    col.xyz = rayDir;
+    //col.xyz = rayDir;
+    if (rayDir.y > 0)
+    {
+        col.xyz *= BackgruoundUp * VectorAngle(rayDir, float3(0, 1, 0));
+    }
+    else
+    {
+        col.xyz *= BackgruoundDown * VectorAngle(rayDir, float3(0, -1, 0));
+    }
+    
+    //col.xyz = float4(VectorAngle(rayDir, float3(0, 1, 0)), VectorAngle(rayDir, float3(0, 1, 0)), VectorAngle(rayDir, float3(0, 1, 0)), 0);
+
     float3 spacing = abs(float3(Spacing1.x, 0.1, Spacing1.z - 400));
 
     float4 hit = float4(0, 0, 0, 0); //w means if hits or not
     float3 normals = float3(0, 0, 0);
-    //main ground
-    if (CubePatternPlane(rayDir, MainGroundPos.xyz, FacingDir.xyz, float3(1000, 1, 1000), Spacing1, hit, normals))
-    {
-        col.xyz = half4(0.8, 0.2, 0.2, 1);
-        //normals = Rotate3DMatrix(rayDir, -FacingDir.xyz);
-    }
 
-    //shitty lighting
-    if (hit.w != 0)
+    float4 colTemp = float4(0, 0, 0, 0);
+    //main ground
+    colTemp = CubePatternPlane(rayDir, MainGroundPos.xyz, FacingDir.xyz, float3(1000, 1, 1000), Spacing1, hit, normals, CubeCol, CubeCol2);
+    if (colTemp.w < 0.9)
     {
-        col *= dot(normals, normalize(-LightDir.xyz));
+        col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
     }
 
     //*
     //partial Cube wall 
-    if (CubePatternPlane(rayDir, CubeWallPos.xyz, CubeWallDir.xyz, CubeWallScale.xyz, Spacing2.xyz, hit, normals))
+    colTemp = CubePatternPlane(rayDir, CubeWallPos.xyz, CubeWallDir.xyz, CubeWallScale.xyz, Spacing2.xyz, hit, normals, CubeCol3, CubeCol4);
+    if (colTemp.w < 0.9)
     {
-        col.xyz = half4(0.8, 0.2, 0.2, 1);
-        //normals = Rotate3DMatrix(rayDir, -CubeWallDir.xyz);
-    }
-
-    //shitty lighting
-    if (hit.w != 0)
-    {
-        col *= dot(normals, normalize(-LightDir.xyz));
+        col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
     }
 
     //partial Cube roof 
-    if (CubePatternPlane(rayDir, CubeRoofPos.xyz, CubeRoofDir.xyz, CubeRoofScale.xyz, Spacing3.xyz, hit, normals))
+    colTemp = CubePatternPlane(rayDir, CubeRoofPos.xyz, CubeRoofDir.xyz, CubeRoofScale.xyz, Spacing3.xyz, hit, normals, CubeCol5, CubeCol6);
+    if (colTemp.w < 0.9)
     {
-        col.xyz = half4(0.8, 0.2, 0.2, 1);
-        //normals = Rotate3DMatrix(rayDir, -CubeRoofDir.xyz);
-    }
-
-    //shitty lighting
-    if (hit.w != 0)
-    {
-        col *= dot(normals, normalize(-LightDir.xyz));
+        col = colTemp * VectorAngle(rayDir, float3(0, 1, 0));
     }
 
     return col;

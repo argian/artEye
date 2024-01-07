@@ -86,3 +86,8 @@ float3 CubeLight(float3 hit, float3 pos, float3 scale)
 	localPos = floor(localPos / maxPos);
 	return localPos;
 }
+
+float VectorAngle(float3 vect1, float3 vect2)
+{
+	return abs(vect1.x * vect2.x + vect1.y * vect2.y + vect1.z * vect2.z) / (length(vect1) * length(vect2));
+}
