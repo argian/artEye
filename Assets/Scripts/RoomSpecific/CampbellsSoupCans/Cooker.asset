@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: Cooker
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 9d8273b5605b3244cab6b7ae0c1a5808,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: f401f2eb45305e945a7a7ebdb1a51022,
     type: 2}
   udonAssembly: 
   assemblyError: 

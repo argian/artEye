@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: TeleporterFadeInOut
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 678d9b2318b27294382e97820b624858,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: d2d5a3eabac138746a7ad438b38824f9,
     type: 2}
   udonAssembly: 
   assemblyError: 

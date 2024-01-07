@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: AnimationSwitch
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 99155a0db11d70046a28da8ad103854c,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 70582d5aa0e200449a178ce3680b0c8f,
     type: 2}
   udonAssembly: 
   assemblyError: 

@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: CookerOnOffButton
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 69394c3f82fd1114da9ebe3260f28bca,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 096f76d52c0b2f84db81dc527f1f3386,
     type: 2}
   udonAssembly: 
   assemblyError: 
