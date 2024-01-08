@@ -1135,7 +1135,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a0c764f61833d094282bb62d603fdf5e,
+      objectReference: {fileID: 11400000, guid: 370d3eaeb462d2146be6dd12725c5887,
         type: 2}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
         type: 3}
@@ -1365,7 +1365,8 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 00f7a84c26c519541801b47529c9bf1b,
+        type: 2}
     - target: {fileID: 4269892710278351460, guid: af78aead1cd79bb45b8f523005a64ea0,
         type: 3}
       propertyPath: m_Name
@@ -1503,7 +1504,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a0c764f61833d094282bb62d603fdf5e,
+      objectReference: {fileID: 11400000, guid: 370d3eaeb462d2146be6dd12725c5887,
         type: 2}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
         type: 3}
@@ -2085,7 +2086,8 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 3588864092113117295, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -2125,7 +2127,8 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 4178215552999249098, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: m_Mesh
@@ -2330,12 +2333,14 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 6448093516178182470, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 6450107517364887480, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: m_StaticEditorFlags
@@ -2780,7 +2785,8 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 3825842785262340741, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: m_Mesh
@@ -2795,7 +2801,8 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 4178215552999249098, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: m_Mesh
@@ -2900,12 +2907,14 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 6448093516178182470, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 11400000, guid: 8cde57585f4a7b64cb5e88b1538d0d89,
+        type: 2}
     - target: {fileID: 6549193277011041420, guid: 2ece48668437b7f409af81b172d9300d,
         type: 3}
       propertyPath: m_Materials.Array.data[0]
@@ -3078,7 +3087,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a0c764f61833d094282bb62d603fdf5e,
+      objectReference: {fileID: 11400000, guid: 370d3eaeb462d2146be6dd12725c5887,
         type: 2}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
         type: 3}
@@ -3304,7 +3313,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a0c764f61833d094282bb62d603fdf5e,
+      objectReference: {fileID: 11400000, guid: 370d3eaeb462d2146be6dd12725c5887,
         type: 2}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
         type: 3}
@@ -3524,7 +3533,7 @@ PrefabInstance:
         type: 3}
       propertyPath: serializedProgramAsset
       value: 
-      objectReference: {fileID: 11400000, guid: a0c764f61833d094282bb62d603fdf5e,
+      objectReference: {fileID: 11400000, guid: 370d3eaeb462d2146be6dd12725c5887,
         type: 2}
     - target: {fileID: 5041871191568853875, guid: bd716b9937445eb46898034191657175,
         type: 3}

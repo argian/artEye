@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: CampbellCan
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: a8d714337a4f82148bd9dce2ed7ee55f,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 7f5f278860dd2514d9aebd6b78bf924d,
     type: 2}
   udonAssembly: 
   assemblyError: 

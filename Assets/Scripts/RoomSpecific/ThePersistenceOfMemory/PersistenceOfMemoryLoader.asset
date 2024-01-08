@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: PersistenceOfMemoryLoader
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 766996d0310dc1c449ce9f0405a189f4,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 1548c5d71bdf13944ac50646839efba0,
     type: 2}
   udonAssembly: 
   assemblyError: 

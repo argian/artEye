@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: KnobHandle
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: f713b4eb2c75a7f41be84072a8c4f42c,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 2d8f999e02a446b4a95a373dcf10dec0,
     type: 2}
   udonAssembly: 
   assemblyError: 

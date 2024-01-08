@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c333ccfdd0cbdbc4ca30cef2dd6e6b9b, type: 3}
   m_Name: FollowCamera
   m_EditorClassIdentifier: 
-  serializedUdonProgramAsset: {fileID: 11400000, guid: 71453679deefe994ea206b7a50778429,
+  serializedUdonProgramAsset: {fileID: 11400000, guid: 89bd5478cbcf099489c7701bc40f28f2,
     type: 2}
   udonAssembly: 
   assemblyError: 
