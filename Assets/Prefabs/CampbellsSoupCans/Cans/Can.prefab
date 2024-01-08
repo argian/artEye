@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8969365771253075706}
   - component: {fileID: 2540624538704672642}
   - component: {fileID: 244929171658614484}
+  - component: {fileID: 5954328984812984843}
   m_Layer: 13
   m_Name: Can
   m_TagString: Untagged
@@ -126,7 +127,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   MomentumTransferMethod: 0
-  DisallowTheft: 0
+  DisallowTheft: 1
   ExactGun: {fileID: 0}
   ExactGrip: {fileID: 0}
   allowManipulationWhenEquipped: 0
@@ -145,6 +146,19 @@ MonoBehaviour:
   currentlyHeldBy: {fileID: 0}
   pickupable: 1
   proximity: 2
+--- !u!114 &5954328984812984843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3777592453878964088}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -1783056023, guid: 661092b4961be7145bfbe56e1e62337b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AllowCollisionOwnershipTransfer: 1
 --- !u!1001 &6244068622750421269
 PrefabInstance:
   m_ObjectHideFlags: 0
